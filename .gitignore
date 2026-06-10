@@ -1,0 +1,18 @@
+# Dataset (10GB — Ircam Forum 가입 후 별도 다운로드)
+_OrchideaSOL2020_release/
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
+.claude/
+
+# 저작권 있는 참고 논문 / 내부 분석 메모
+*.pdf
+전문가피드백.md

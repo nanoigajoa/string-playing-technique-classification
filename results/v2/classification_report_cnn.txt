@@ -1,0 +1,11 @@
+                   precision    recall  f1-score   support
+
+        ordinario       1.00      0.95      0.98      1193
+  pizzicato_secco       0.97      0.79      0.87       639
+          tremolo       1.00      1.00      1.00      1041
+   sul_ponticello       0.85      0.99      0.91       302
+col_legno_battuto       0.61      0.93      0.73       227
+
+         accuracy                           0.94      3402
+        macro avg       0.88      0.93      0.90      3402
+     weighted avg       0.95      0.94      0.94      3402
