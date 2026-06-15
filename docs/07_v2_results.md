@@ -58,11 +58,11 @@ Input: (batch, 1, 128, 128)
 
 | Fold | Test Instrument | Macro F1 |
 |---|---|---|
-| 1 | Viola | — |
-| 2 | Violin | — |
-| 3 | Contrabass | — |
-| 4 | Violoncello | — |
-| **Mean ± Std** | | **0.9045 ± 0.0327** |
+| 1 | Viola | 0.8868 |
+| 2 | Violin | 0.8766 |
+| 3 | Contrabass | 0.9008 |
+| 4 | Violoncello | 0.9545 |
+| **Mean ± Std** | | **0.9046 ± 0.0300** |
 
 ---
 
@@ -70,12 +70,12 @@ Input: (batch, 1, 128, 128)
 
 | Class | Precision | Recall | F1 |
 |---|---|---|---|
-| ordinario | 0.99 | 0.96 | **0.98** |
+| ordinario | 1.00 | 0.95 | **0.98** |
 | tremolo | 1.00 | 1.00 | **1.00** |
-| sul_ponticello | 0.86 | 0.97 | **0.91** |
-| pizzicato_secco | 0.96 | 0.80 | **0.88** |
-| col_legno_battuto | 0.62 | 0.92 | **0.74** |
-| **Macro avg** | 0.89 | 0.93 | **0.90** |
+| sul_ponticello | 0.85 | 0.99 | **0.91** |
+| pizzicato_secco | 0.97 | 0.79 | **0.87** |
+| col_legno_battuto | 0.61 | 0.93 | **0.73** |
+| **Macro avg** | 0.88 | 0.93 | **0.90** |
 
 ---
 
@@ -87,10 +87,10 @@ Input: (batch, 1, 128, 128)
 
 ## Error Analysis
 
-**col_legno_battuto (F1=0.74):** precision=0.62, recall=0.92 — 공격적 예측 경향.
+**col_legno_battuto (F1=0.73):** precision=0.61, recall=0.93 — 공격적 예측 경향.
 class_weight=2.997으로 소수 클래스에 강한 페널티를 줬기 때문. 실제 col_legno를 거의 놓치지 않는 대신 다른 기법을 col_legno로 오분류하는 트레이드오프가 발생함.
 
-**pizzicato_secco (F1=0.88):** recall=0.80 — 일부 pizzicato 샘플을 ordinario로 오분류.
+**pizzicato_secco (F1=0.87):** recall=0.79 — 일부 pizzicato 샘플을 ordinario로 오분류.
 OrchideaSOL에서 pizzicato는 음폭(dynamic)에 따라 소리 특성 차이가 크며, 약한 pizzicato가 ordinario와 혼동됨.
 
 **tremolo (F1=1.00):** 완벽한 분류. 빠른 반복 보잉이 멜 스펙트로그램에서 주기적인 패턴으로 명확히 나타남.
@@ -103,7 +103,7 @@ OrchideaSOL에서 pizzicato는 음폭(dynamic)에 따라 소리 특성 차이가
 2. **tremolo와 ordinario는 CNN이 가장 안정적으로 분류** — 멜 스펙트로그램이 시간적 주기 패턴을 잘 포착.
 3. **col_legno_battuto는 여전히 어렵다** — 소수 클래스 + 타악적 어택이 현악기 오디오에서 비정형적으로 나타남.
 4. **SpecAugment 효과:** 제한된 데이터(227~1,193개/클래스)에서 과적합 억제.
-5. **fold 간 분산(±0.033) > v1 SVM(±0.011)** — CNN이 특정 악기(Contrabass 등) 타임브레 변화에 더 민감.
+5. **fold 간 분산(±0.030) > v1 SVM(±0.011)** — CNN이 특정 악기(Violin/Viola 등) 타임브레 변화에 더 민감.
 
 ---
 

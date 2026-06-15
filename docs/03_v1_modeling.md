@@ -53,11 +53,11 @@ shap_values = explainer.shap_values(X_test)
 shap.summary_plot(shap_values, X_test, feature_names=feature_names)
 ```
 
-### 목표 서술
+### 해석의 목표
 
 > "X 기법은 Y 특징이 결정적이었고, 그 이유는 음향학적으로 Z이며, 누수는 그룹 분할로 막았다."
 
-특징 나열이 아니라 **인과적 설명 + 검증 절차**가 차별점이다.
+특징 나열이 아니라 **인과적 설명 + 검증 절차**를 제시하는 것이 목표다.
 
 ---
 

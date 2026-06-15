@@ -18,9 +18,12 @@
 | Phase 3 | 데이터 분할 및 누수 방지 | [01_data.md](01_data.md) |
 | Phase 4 | v1 모델링 (RF / XGBoost / SVM) | [03_v1_modeling.md](03_v1_modeling.md) |
 | Phase 5 | v2 확장 (CNN) 및 비교 | [04_v2_cnn.md](04_v2_cnn.md) |
-| Phase 6 | 문서화 및 포트폴리오 | [04_v2_cnn.md](04_v2_cnn.md) |
+| Phase 6 | 문서화 및 결과 정리 | [04_v2_cnn.md](04_v2_cnn.md) |
+| Phase 7 | 연구적 위치 평가 및 발전 방향 | [08_research_context.md](08_research_context.md) |
 
 리스크 및 참고 자료 → [05_risks_and_references.md](05_risks_and_references.md)
+
+v1 / v2 결과 → [06_v1_results.md](06_v1_results.md), [07_v2_results.md](07_v2_results.md)
 
 ---
 

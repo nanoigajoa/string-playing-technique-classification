@@ -42,7 +42,7 @@ def extract_features(y, sr):
 ### Chroma를 왜 빼지 않는가
 
 Chroma는 pitch class 정보라 Pizzicato/Arco처럼 같은 음으로 연주 가능한 기법은 구분하지 못한다.  
-빼는 대신 **"왜 안 되는지 증명하는 대조군"으로 명시적으로 포함** → 면접에서 오히려 도메인 이해가 드러난다.
+빼는 대신 **"왜 안 되는지 증명하는 대조군"으로 명시적으로 포함** → 모델이 spurious correlation(피치-기법 공분산)에 의존하지 않음을 보여주는 negative control로 기능한다.
 
 ---
 

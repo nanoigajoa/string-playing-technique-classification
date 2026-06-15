@@ -12,7 +12,7 @@ OrchideaSOL 데이터셋을 사용해 현악기 5가지 연주기법을 자동 �
 | Model | Macro F1 | Std | Track |
 |---|---|---|---|
 | **SVM (RBF)** | **0.916** | ±0.011 | v1 |
-| CNN (SmallCNN) | 0.905 | ±0.033 | v2 |
+| CNN (SmallCNN) | 0.905 | ±0.030 | v2 |
 | XGBoost (tuned) | 0.891 | ±0.000 | v1 |
 | Random Forest | 0.886 | ±0.060 | v1 |
 
