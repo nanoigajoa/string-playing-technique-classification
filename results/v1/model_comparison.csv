@@ -1,5 +1,5 @@
 Model,Test F1,Std,Train F1
 Random Forest,0.8862,0.0601,1.0
 XGBoost (default),0.8912,0.0256,1.0
-XGBoost (tuned),0.8914,0.0,
+XGBoost (tuned),0.8928,0.0322,
 SVM,0.9159,0.0113,1.0

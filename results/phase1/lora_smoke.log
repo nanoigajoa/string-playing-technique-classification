@@ -1,0 +1,10 @@
+device=mps | 실행할 split=1 | LoRA r=8
+MERT 로드...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING: feature_extractor_cqt requires the libray 'nnAudio'
+Loading weights:   0%|          | 0/211 [00:00<?, ?it/s]Loading weights: 100%|██████████| 211/211 [00:00<00:00, 64570.13it/s]
+[1/1] f0 r20% t0   tokenize 1329 clips 3s
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+[1/1] f0 r20% t0     ep 0 es_f1=0.542 best=0.542 wait=0
+/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-72963-kugm91z1'}
+  warnings.warn(

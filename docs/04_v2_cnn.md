@@ -1,5 +1,7 @@
 # v2 확장 — CNN + v1 비교
 
+> 작성: 2026-06-15
+
 ## Phase 5 — mel-spectrogram + CNN
 
 ### 입력 설계

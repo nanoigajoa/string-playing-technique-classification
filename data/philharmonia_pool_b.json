@@ -1,0 +1,872 @@
+[
+  {
+    "path": "data/philharmonia/Strings/violin/violin_A6_1_piano_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_As3_025_piano_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_As3_1_piano_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_As4_025_piano_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_As5_025_mezzo-forte_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_As5_025_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_B4_025_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_B5_phrase_fortissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_C4_phrase_mezzo-forte_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_C5_025_piano_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_C5_1_piano_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Cs4_025_mezzo-forte_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Cs4_1_mezzo-piano_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_D5_very-long_fortissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_D6_025_mezzo-forte_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_D6_1_mezzo-forte_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Ds4_phrase_pianissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Ds5_025_pianissimo_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Ds5_025_piano_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Ds5_025_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Ds6_1_mezzo-forte_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_E4_025_pianissimo_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_E4_025_piano_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_E4_phrase_pianissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_E5_025_piano_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_E5_1_piano_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_E5_phrase_fortissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_E5_very-long_fortissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_F4_025_piano_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_F4_025_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_F4_1_piano_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Fs4_025_piano_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Fs5_phrase_fortissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G3_1_mezzo-forte_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G3_1_piano_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G3_long_piano_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G4_025_forte_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G4_phrase_fortissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G4_phrase_mezzo-forte_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G4_phrase_pianissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G5_1_mezzo-forte_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G6_025_mezzo-forte_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G6_025_piano_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G7_1_piano_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Gs3_1_mezzo-forte_arco-sul-ponticello.mp3",
+    "label": "sul_ponticello",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Gs3_phrase_mezzo-piano_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Gs5_025_mezzo-forte_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Gs6_025_piano_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Gs6_025_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_A3_1_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_A4_1_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_As3_1_fortissimo_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_As3_1_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_As4_1_fortissimo_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_C3_1_fortissimo_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_C4_1_fortissimo_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_C6_1_fortissimo_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_C6_1_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_Cs4_1_fortissimo_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_D5_1_fortissimo_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_Ds3_1_fortissimo_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_G3_1_fortissimo_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_G3_phrase_fortissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_G4_1_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_Gs3_1_fortissimo_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_A3_phrase_fortissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_As2_025_mezzo-forte_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_C3_025_mezzo-forte_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Cs2_025_mezzo-forte_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Fs3_025_mezzo-forte_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_G2_phrase_fortissimo_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Gs4_025_mezzo-forte_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_A2_025_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_As2_025_mezzo-forte_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_B2_phrase_mezzo-forte_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_D2_025_mezzo-forte_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_D2_025_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_E1_025_mezzo-forte_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_E1_phrase_forte_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_E1_phrase_mezzo-forte_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_E1_phrase_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_Fs2_phrase_mezzo-forte_arco-tremolo.mp3",
+    "label": "tremolo",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_Fs3_025_mezzo-forte_arco-col-legno-battuto.mp3",
+    "label": "col_legno_battuto",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_G3_025_piano_pizz-normal.mp3",
+    "label": "pizzicato_secco",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_As4_025_pianissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_As6_025_mezzo-forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_B6_025_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_C4_1_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Cs4_05_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Cs4_05_piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Cs6_025_mezzo-forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Cs6_025_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_D5_025_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_D6_05_pianissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_D7_05_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Ds6_05_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Ds6_1_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Ds7_025_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Ds7_1_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_E5_025_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_E7_05_piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_E7_15_piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Fs7_1_mezzo-forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G3_025_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G4_025_pianissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_G7_1_pianissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Gs4_05_mezzo-forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/violin/violin_Gs5_05_pianissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "violin"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_A5_1_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_As3_1_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_As4_1_piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_B6_025_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_C4_025_pianissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_C6_05_piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_Cs4_025_pianissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_D6_025_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_E5_1_piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_E6_05_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_F3_1_piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_F4_025_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_F4_1_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_F4_phrase_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_Fs3_025_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_Fs3_15_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_Fs4_05_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_G3_05_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_G4_1_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/viola/viola_Gs4_15_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "viola"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_A5_05_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_As3_05_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_As4_15_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_C3_15_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_C4_025_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_C4_15_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Cs3_05_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_D3_1_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_D4_025_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_D5_05_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Ds2_05_piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_E5_05_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_F3_05_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_F5_025_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_F5_025_pianissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Fs3_025_pianissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Fs3_05_piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Fs3_15_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Fs4_15_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Fs4_15_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_G2_025_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_G2_05_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_G4_025_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Gs3_025_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Gs3_15_piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Gs4_05_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Gs5_025_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/cello/cello_Gs5_05_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "cello"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_A1_1_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_As1_15_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_As3_05_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_B1_025_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_C2_1_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_C3_05_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_Cs4_025_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_Ds4_05_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_E2_1_fortissimo_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_Fs1_025_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_Fs2_05_mezzo-forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_Fs4_025_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_Fs4_05_forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_G1_1_mezzo-forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_G2_1_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_G4_025_mezzo-forte_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_Gs1_05_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  },
+  {
+    "path": "data/philharmonia/Strings/double bass/double-bass_Gs1_15_mezzo-piano_arco-normal.mp3",
+    "label": "ordinario",
+    "instrument": "double bass"
+  }
+]

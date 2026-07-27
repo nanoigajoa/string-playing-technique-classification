@@ -1,5 +1,7 @@
 # 특징 추출 파이프라인
 
+> 작성: 2026-06-15
+
 ## 핵심 설계
 
 오디오는 길이가 제각각이고 XGBoost는 고정 길이 표 데이터를 입력으로 받는다.  
@@ -31,13 +33,21 @@ def extract_features(y, sr):
 
 ## 특징 우선순위
 
-| 특징 | 변별력 | 이유 |
+> 아래는 **설계 시점의 사전 기대**이며, 실제 SHAP 실측 순위는 다르다(각주 참조).
+
+| 특징 | 사전 기대 | 이유 |
 |---|---|---|
-| Log-Attack-Time, Temporal Centroid | ★★★ | Pizz/Spiccato 짧은 어택 vs Arco 지속음 |
-| Spectral Flux / ZCR | ★★★ | 과도부·잡음성 (활 소음, 트레몰로 진동) 포착 |
+| Onset-strength envelope / ZCR | ★★★ | 과도부·잡음성 (활 소음, 트레몰로 진동) 포착 |
+| 어택 타이밍 (구현: log first-onset time) | ★★★ (기대) | Pizz/Spiccato 짧은 어택 vs Arco 지속음 |
 | MFCC (+Δ, ΔΔ) | ★★ | 전반적 음색 + 시간 변화 |
 | Spectral Contrast | ★★ | 배음 구조 차이 |
 | **Chroma** | ☆ | 음높이 정보 — **음성 대조군(negative control)으로만 포함** |
+
+> **실측 보정 (A5, SHAP per-feature)**: onset-strength envelope(코드명 `flux`)가 실제 **1위**로
+> 기대와 일치. 그러나 "어택 타이밍" 특징은 기대(★★★)와 달리 **최하위(7/7, 0.0017)**였다.
+> 그 이유가 구현에 있다: 이 특징은 log-attack-time(어택 상승시간)이 아니라 **첫 onset의 시각에
+> log1p를 취한 값**(`log_first_onset_time`)이라 기법 변별 정보가 거의 없다. 과거 `log_attack_time`
+> 오표기를 이름·서술 모두 정정했다.
 
 ### Chroma를 왜 빼지 않는가
 
@@ -52,7 +62,7 @@ Chroma는 pitch class 정보라 Pizzicato/Arco처럼 같은 음으로 연주 가
 |---|---|
 | MFCC | `librosa.feature.mfcc` |
 | Spectral Contrast | `librosa.feature.spectral_contrast` |
-| Spectral Flux | `librosa.onset.onset_strength` |
+| Onset-strength envelope (mel 기반 half-wave-rectified spectral flux; 컬럼명 `flux_*`) | `librosa.onset.onset_strength` |
 | ZCR | `librosa.feature.zero_crossing_rate` |
 | Chroma | `librosa.feature.chroma_stft` |
-| Onset (어택 타이밍) | `librosa.onset.onset_detect` |
+| Log first-onset time (첫 onset 시각의 log1p — attack time 아님) | `librosa.onset.onset_detect` |

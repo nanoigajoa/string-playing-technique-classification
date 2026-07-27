@@ -1,0 +1,97 @@
+# Phase 3 Results — SHAP Interpretability
+
+**Model**: XGBoost v1 (F1=0.891)  |  **Features**: 245-dim acoustic descriptors
+
+---
+
+## 1. Feature Group Importance (dimensionality-corrected)
+
+> Raw sum inflates groups with more features (MFCC has 80 dims vs Flux 4 dims).
+> Right column shows per-feature mean — the dimensionality-corrected ranking.
+
+| Rank | Group | n features | Raw sum | Per-feature mean |
+|---|---|---|---|---|
+| 1 | Onset-strength envelope | 4 | 1.9242 | **0.4811** |
+| 2 | RMS | 4 | 0.1857 | **0.0464** |
+| 3 | Spectral (sc) | 28 | 0.7988 | **0.0285** |
+| 4 | MFCC+Δ+ΔΔ | 156 | 3.5593 | **0.0228** |
+| 5 | ZCR | 4 | 0.0446 | **0.0112** |
+| 6 | Chroma | 48 | 0.1780 | **0.0037** |
+| 7 | Log first-onset time | 1 | 0.0017 | **0.0017** |
+
+Chroma rank (raw): 5/7  →  rank (normalized): 6/7
+
+---
+
+## 2. Per-class Top Feature & Directional SHAP
+
+> `flux_std_0` is the top feature shared by ordinario and col_legno_battuto,
+> but each class occupies a **different range** of the feature (see `shap_flux_direction.png`):
+
+| Class | Top SHAP Feature | Direction | ALM Open Miss |
+|---|---|---|---|
+| ordinario | `flux_std_0` | **medium** flux_std (median 0.51) → class | 100% |
+| pizzicato_secco | `mfcc_d_mean_1` | — | 0% |
+| tremolo | `flux_q75_0` | **high** flux variance → class | 100% |
+| sul_ponticello | `flux_q75_0` | intermediate | 100% |
+| col_legno_battuto | `flux_std_0` | **low** flux_std (median 0.18) → class | 100% |
+
+---
+
+## 3. Surrogate Fidelity (XGBoost → MERT)
+
+> **Measured out-of-sample (instrument-level GroupKFold).** An earlier version reported
+> in-sample agreement **0.998**, but that was an artifact: `xgb_v1` memorizes the training
+> set (in-sample accuracy 1.0), so agreement is automatic (in-sample here: 0.998).
+> The honest question is whether the two model families agree on *held-out* data.
+
+| Metric | Value | Reading |
+|---|---|---|
+| OOF prediction agreement | **0.914** | XGBoost & MERT-LR agree on 91% of held-out clips |
+| Cohen's κ (chance-corrected) | **0.882** | substantial, but not the near-perfect 0.998 |
+| Agreement on error cases (n=348) | **0.16** | when ≥1 model errs, they rarely make the *same* call |
+
+| Class | OOF agreement | one-vs-rest κ | SHAP interpretation validity |
+|---|---|---|---|
+| ordinario | 0.925 | 0.875 | high |
+| pizzicato_secco | 0.923 | 0.908 | high |
+| tremolo | 0.979 | 0.967 | high |
+| sul_ponticello | 0.762 | 0.744 | moderate |
+| col_legno_battuto | 0.731 | 0.717 | moderate |
+
+> **Takeaway (do NOT headline as "0.998").** XGBoost is a *reasonable but imperfect*
+> surrogate for MERT (κ ≈ 0.88 out-of-sample). Surrogacy is weakest exactly on the rare
+> classes — sul_ponticello (κ 0.74) and col_legno_battuto (κ 0.71) — so SHAP explanations
+> for those two transfer to MERT only with caution. The low error-case agreement means
+> the two families fail on *different* clips; SHAP explains XGBoost decisions, and only
+> approximately MERT.
+
+---
+
+## 4. Phase 2 / Phase 3 Synthesis
+
+Qwen2-Audio: yes/no accuracy 50.4%  |  open-ended accuracy 20.0%
+
+**Observation** (correlation, not confirmed causation):
+
+- **pizzicato_secco**: ALM 100% correct. SHAP shows high mfcc_delta + low RMS — acoustically distinct, consistent with ALM success.
+- **ordinario**: ALM 0% open correct. SHAP top feature is `flux_std` at a medium level (median 0.51, close to sul_ponticello 0.48). *Hypothesis*: ordinarios sustained, stable bow sits right next to sul_ponticello on flux_std, so ALM struggles to separate them without fine-grained spectral cues. Causal link unconfirmed — could reflect ALM training data bias toward percussive/extreme techniques.
+- **tremolo**: ALM 0% open correct. SHAP top feature is high `flux_q75`. *Hypothesis*: rapid bow repetition produces high flux variance, which XGBoost captures well. Whether ALM fails due to this specific cue is unverified; intervention experiment needed to confirm.
+
+> **Limitation**: The Phase 2→3 connection is observational.
+> Proving causation requires an intervention experiment (e.g., artificially varying
+> flux_std on ordinario clips and re-querying the ALM).
+
+---
+
+## Output Files
+
+| File | Description |
+|---|---|
+| `shap_group_bar.png` | Group importance: raw vs normalized side-by-side |
+| `shap_beeswarm_top20.png` | Top-20 features beeswarm |
+| `shap_per_class_bar.png` | Top-8 features per class |
+| `shap_flux_direction.png` | Directional SHAP — flux_std for ordinario vs col_legno |
+| `shap_surrogate_fidelity.png` | Per-class one-vs-rest Cohen κ, out-of-sample (GroupKFold) |
+| `shap_case_ordinario.png` | Waterfall case studies — ordinario |
+| `shap_case_tremolo.png` | Waterfall case studies — tremolo |

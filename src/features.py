@@ -36,12 +36,21 @@ def extract_features(filepath: str, sr: int = 22050) -> np.ndarray:
     특징 구성:
         MFCC (13) + Δ + ΔΔ  × 4통계 = 156
         Spectral Contrast (7) × 4통계 = 28
-        Spectral Flux (1)     × 4통계 = 4
+        Onset-strength envelope (1) × 4통계 = 4   (코드 prefix 'flux' — 상세 아래)
         ZCR (1)               × 4통계 = 4
         RMS Energy (1)        × 4통계 = 4
         Chroma (12, 음성대조군) × 4통계 = 48
-        Log-Attack-Time (1 scalar)    = 1
+        Log first-onset time (1 scalar)  = 1
         합계: 245
+
+    용어 주의 (A5):
+      · 'flux_*' 컬럼의 실체는 librosa.onset.onset_strength — mel 스펙트로그램의
+        프레임간 차분을 half-wave rectify 후 mel축 합산한 **onset strength envelope**다.
+        (수학적으로 mel 기반 spectral flux의 일종이지만) 논문 표기는 "onset strength
+        envelope"로 통일한다. 이 특징이 per-feature SHAP 1위다.
+      · 'log_first_onset_time'은 **첫 onset의 시각**에 log1p를 취한 값이다. MIR의
+        log-attack-time(onset→peak 상승시간)이 **아니다** — 과거 오표기를 이름으로 정정했다.
+        (SHAP 중요도 최하위라 결론에 영향 없음)
     """
     y, sr = librosa.load(filepath, sr=sr)
     parts = []
@@ -56,7 +65,8 @@ def extract_features(filepath: str, sr: int = 22050) -> np.ndarray:
     sc = librosa.feature.spectral_contrast(y=y, sr=sr)
     parts.append(_aggregate(sc))
 
-    # Spectral Flux (onset strength)
+    # Onset-strength envelope (mel 기반 half-wave-rectified spectral flux)
+    # 컬럼 prefix는 하위호환 위해 'flux' 유지 — 실체는 onset_strength envelope
     flux = librosa.onset.onset_strength(y=y, sr=sr)
     parts.append(_aggregate(flux))
 
@@ -72,10 +82,10 @@ def extract_features(filepath: str, sr: int = 22050) -> np.ndarray:
     chroma = librosa.feature.chroma_stft(y=y, sr=sr)
     parts.append(_aggregate(chroma))
 
-    # Log-Attack-Time (첫 onset까지의 시간)
+    # Log first-onset time — 첫 onset의 시각에 log1p (attack time이 아님, A5 참조)
     onsets = librosa.onset.onset_detect(y=y, sr=sr, units='time')
-    lat = np.log1p(onsets[0]) if len(onsets) > 0 else 0.0
-    parts.append(np.array([lat]))
+    log_first_onset = np.log1p(onsets[0]) if len(onsets) > 0 else 0.0
+    parts.append(np.array([log_first_onset]))
 
     return np.concatenate(parts)
 
@@ -90,7 +100,7 @@ def make_feature_names() -> list[str]:
     for prefix, n in [('sc', 7), ('flux', 1), ('zcr', 1), ('rms', 1), ('chroma', 12)]:
         for s in stats:
             names += [f'{prefix}_{s}_{i}' for i in range(n)]
-    names.append('log_attack_time')
+    names.append('log_first_onset_time')
     return names
 
 

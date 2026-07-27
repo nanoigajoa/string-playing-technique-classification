@@ -1,0 +1,7 @@
+device=mps | 실행할 split=8 | LoRA r=8 | rest=60.0s/epoch
+MERT 로드...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING: feature_extractor_cqt requires the libray 'nnAudio'
+Loading weights:   0%|          | 0/211 [00:00<?, ?it/s]Loading weights: 100%|██████████| 211/211 [00:00<00:00, 72109.36it/s]
+[1/8] f0 r20% t0   tokenize 1329 clips 3s
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!

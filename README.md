@@ -13,7 +13,7 @@ OrchideaSOL 데이터셋을 사용해 현악기 5가지 연주기법을 자동 �
 |---|---|---|---|
 | **SVM (RBF)** | **0.916** | ±0.011 | v1 |
 | CNN (SmallCNN) | 0.905 | ±0.030 | v2 |
-| XGBoost (tuned) | 0.891 | ±0.000 | v1 |
+| XGBoost (tuned) | 0.893 | ±0.032 | v1 |
 | Random Forest | 0.886 | ±0.060 | v1 |
 
 평가: **Leave-One-Instrument-Out** (GroupKFold n=4) — 학습에 사용하지 않은 악기 전체로 테스트
@@ -45,7 +45,7 @@ Kruger & Jacobs (2020, JNMR) — 이 분야 대표 논문 — 과 비교:
 | 검증 방법 | 70/30 random split × 20회 | **LOSO GroupKFold** (악기 단위 완전 분리) |
 | 모델 | SVM only | SVM + XGBoost + RF + **CNN 비교** |
 | 해석 | 없음 | **SHAP + Feature Importance + Ablation** |
-| 클래스 | Normal/Spiccato/Flageolet 등 9개 | col_legno_battuto 포함 5개 |
+| 클래스 | Normal/Spiccato/Flageolet 등 9/11기법 (9-class + 11-class) | col_legno_battuto 포함 5개 |
 
 **핵심 차이:** 논문의 random 70/30은 같은 연주자 녹음이 train/test에 동시 등장할 수 있음. 본 프로젝트의 LOSO는 테스트 시 한 번도 본 적 없는 악기 전체로 평가 — 더 엄격하고 현실적인 검증.
 
@@ -134,7 +134,7 @@ python src/predict.py path/to/audio.wav --model cnn
 
 ## 주요 발견
 
-- **Spectral Flux와 ΔMFCC가 핵심 특징** — 어택 특성(어떻게 소리가 시작되는가)이 기법 변별의 핵심
+- **Onset-strength envelope와 ΔMFCC가 핵심 특징** — 어택 특성(어떻게 소리가 시작되는가)이 기법 변별의 핵심
 - **Chroma는 spurious signal** — 피치 클래스 정보는 기법 분류에 무효, 데이터 분포 아티팩트
 - **SVM이 CNN보다 낫다** — 3,402개 데이터에서는 마진 최적화가 딥러닝보다 견고
 - **col_legno_battuto가 가장 어렵다** — 타악적 특성이 현악기 오디오에서 비정형적

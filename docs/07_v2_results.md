@@ -1,5 +1,7 @@
 # v2 Results — Mel-Spectrogram + CNN
 
+> 작성: 2026-06-15
+
 ## Dataset
 
 | Item | Value |

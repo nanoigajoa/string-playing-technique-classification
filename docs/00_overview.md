@@ -1,5 +1,7 @@
 # 프로젝트 개요 및 로드맵
 
+> 작성: 2026-06-28
+
 ## 목표
 
 현악기 연주기법(Arco / Pizzicato / Tremolo / Spiccato 등)을 자동 분류하는 ML 파이프라인을 두 단계로 구축한다.
@@ -22,6 +24,8 @@
 | Phase 7 | 연구적 위치 평가 및 발전 방향 | [08_research_context.md](08_research_context.md) |
 
 리스크 및 참고 자료 → [05_risks_and_references.md](05_risks_and_references.md)
+
+v1/v2 이후 확장(Self-Training + ALM 환각 평가 + SHAP) → [확장/00_overview.md](확장/00_overview.md)
 
 v1 / v2 결과 → [06_v1_results.md](06_v1_results.md), [07_v2_results.md](07_v2_results.md)
 

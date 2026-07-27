@@ -1,5 +1,7 @@
 # v1 Results — Feature Engineering + Classical ML
 
+> 작성: 2026-06-06
+
 ## Dataset
 
 | Item | Value |
@@ -20,8 +22,8 @@
 | Model | Test Macro F1 | Std | Note |
 |---|---|---|---|
 | SVM (RBF) | **0.916** | ±0.011 | Best and most stable |
-| XGBoost (tuned) | 0.891 | ±0.000 | GridSearchCV CV score |
-| XGBoost (default) | 0.891 | ±0.026 | Tuning gave negligible gain |
+| XGBoost (tuned) | 0.893 | ±0.032 | LOSO 4-fold (실제 std); 이전 ±0.000은 gs.best_score_ 재보고였음 |
+| XGBoost (default) | 0.887 | ±0.028 | Tuning gave negligible gain (+0.006) |
 | Random Forest | 0.886 | ±0.060 | Highest variance across folds |
 
 **Key observation:** SVM dominates at 3k — 자연 클래스 불균형 환경에서 마진 최대화 방식이 부스팅·배깅보다 견고하다. RF의 높은 분산(±0.060)은 어느 악기가 test fold로 빠지느냐에 따라 결정 경계가 크게 흔들린다는 의미.
@@ -58,7 +60,7 @@ Top features overall: `mfcc_d_mean_1`, `flux_q75_0`, `mfcc_d2_mean_1`
 |---|---|---|
 | **pizzicato_secco** | `mfcc_d_mean_1`, `flux_q75_0` | Abrupt spectral energy change at pluck attack; sharp onset burst |
 | **tremolo** | `flux_q75_0`, `flux_std_0` | Rapid repeated bow strokes → periodic onset bursts, high Flux peak and variance |
-| **col_legno_battuto** | `flux_std_0`, `mfcc_d2_mean_1` | Irregular bow-stick impacts → highest Flux variance across all classes |
+| **col_legno_battuto** | `flux_std_0`, `mfcc_d2_mean_1` | Brief bow-stick tap then rapid decay → **lowest** onset-strength variance of all classes (median flux_std 0.18); the transient is short, so sustained spectral change is minimal |
 | **sul_ponticello** | `mfcc_q75_0`, `flux_q75_0` | Bowing near bridge enriches upper harmonics → elevated MFCC #0 upper quartile |
 | **ordinario** | `sc_q25_1`, `sc_q25_2` | Stable harmonic structure → Spectral Contrast lower quartiles as discriminating signal |
 
