@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-21T03:26:06.428861+00:00",
+  "fold_key": "fold2_Contrabass",
+  "fold": 2,
+  "held_out_instrument": "Contrabass",
+  "seed": 520002,
+  "training_spec": {
+    "epochs": 30,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": "CosineAnnealingLR(T_max=epochs)",
+    "augmentation": "one random frequency mask and one random time mask per training access"
+  },
+  "selection_rule": "preregistered final epoch; no validation or test selection",
+  "n_train": 2569,
+  "n_test": 833,
+  "train_index_hash": "0833c29d43cec03620a230509ec037c083d117d6828c8011589767804f04bae4",
+  "test_index_hash": "d5509afa1521d8baa19d64aa4eaa6fc7d7ac3920599294c76eed59642f3b5002",
+  "partitions_disjoint": true,
+  "class_weight_source": "labels[train_idx] only",
+  "train_class_counts": [
+    884,
+    474,
+    813,
+    226,
+    172
+  ],
+  "class_weights": [
+    0.5812217194570136,
+    1.0839662447257383,
+    0.631980319803198,
+    2.2734513274336283,
+    2.9872093023255815
+  ],
+  "class_weight_hash": "391e5f0f9b14b92be36c0c7d31a8fa99634056016b2abef076342f8a12959d9a",
+  "epoch_train_losses": [
+    1.0440257920159235,
+    0.65018117133482,
+    0.5091083482091809,
+    0.45690508665126045,
+    0.41434741406529035,
+    0.3738929785696077,
+    0.3682911806268456,
+    0.3522060982607029,
+    0.3046916201710701,
+    0.301642523135668,
+    0.27557044977575174,
+    0.31129162114711456,
+    0.30228746581224747,
+    0.24317322386267745,
+    0.2620794040921294,
+    0.25563433674382574,
+    0.24553122012703507,
+    0.25393024721631297,
+    0.21100126045905512,
+    0.2026573307812214,
+    0.19458221552180655,
+    0.20056568403486852,
+    0.18063581957953212,
+    0.1716295269628366,
+    0.17096288929934855,
+    0.16187865429638346,
+    0.14072986411643618,
+    0.16797649750003107,
+    0.1566748125133691,
+    0.14647838203121483
+  ],
+  "metrics": {
+    "macro_f1": 0.9058223225046674,
+    "per_class_f1": [
+      0.943089430894309,
+      0.9456869009584664,
+      1.0,
+      0.7741935483870968,
+      0.8661417322834646
+    ],
+    "confusion_matrix": [
+      [
+        290,
+        0,
+        0,
+        19,
+        0
+      ],
+      [
+        0,
+        148,
+        0,
+        0,
+        17
+      ],
+      [
+        0,
+        0,
+        228,
+        0,
+        0
+      ],
+      [
+        16,
+        0,
+        0,
+        60,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        55
+      ]
+    ]
+  },
+  "artifacts": {
+    "checkpoint": "models/phase1/canonical/cnn/fold2_Contrabass/final_epoch.pt",
+    "checkpoint_sha256": "e6b7a267b4cbce90aa3d548f526cc04415d65fa09404c67bdf6085ff4c18cbba",
+    "predictions": "results/phase1/canonical/cnn/predictions/fold2_Contrabass.npz",
+    "predictions_sha256": "d1f5fc4c067a69a5cee619bab59508452b4b44147374d3a6710bc3ba16d33879"
+  },
+  "prediction_content_hash": "983b02e1f7427497bf4b116d7a3d7b0c43059e1cd9c9a98f07c97e97a77525fe",
+  "test_prediction_calls": 1
+}

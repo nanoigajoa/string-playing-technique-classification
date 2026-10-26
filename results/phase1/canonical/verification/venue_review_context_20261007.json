@@ -1,0 +1,221 @@
+{
+  "date": "2026-10-07",
+  "mode": "existing_result_context_for_editorial_assessment",
+  "source_hashes": {
+    "results/phase1/canonical/mert_svm/canonical_summary.csv": "c8259a01b2536fa7b545301ad131fc19e8d327addb23e51af452fef8892258f1",
+    "results/phase1/canonical/mert_svm/canonical_results.csv": "2757ce8b190bf3ecd8b95a0bce9a85cf483b30d4572e2a6b7d50458e9e69b71a",
+    "results/phase1/canonical/verification/per_class_f1.csv": "4d889a6a0ab4e6cb6a435124368a159fbb6294db4dbeee39920d4da79455b8af",
+    "results/phase1/canonical/verification/bootstrap_sensitivity.csv": "65eb73747cf7792e3fd48e287ec2dbc8cdc6d8cbca02fcc31a2a2634e79e5bdd",
+    "paper/manuscripts/v2/주법분류_논문초안_국문_v2.md": "b9aa5d6b107773feede89e911125a7e05a137a28daf63f226f48e4791a7c43b8"
+  },
+  "mert_svm_summary": [
+    {
+      "seed_ratio": "0.05",
+      "n_splits": "12",
+      "n_outer_folds": "4",
+      "mert_macro_f1_fold_mean": "0.6654992613437067",
+      "mert_macro_f1_fold_sd": "0.023838007747133308",
+      "svm_macro_f1_fold_mean": "0.6612765620651959",
+      "svm_macro_f1_fold_sd": "0.05343047957475393",
+      "mert_minus_svm": "0.004222699278510739"
+    },
+    {
+      "seed_ratio": "0.1",
+      "n_splits": "12",
+      "n_outer_folds": "4",
+      "mert_macro_f1_fold_mean": "0.7633932855994073",
+      "mert_macro_f1_fold_sd": "0.024755342694719656",
+      "svm_macro_f1_fold_mean": "0.7541956746553324",
+      "svm_macro_f1_fold_sd": "0.07800746821425716",
+      "mert_minus_svm": "0.009197610944074869"
+    },
+    {
+      "seed_ratio": "0.2",
+      "n_splits": "12",
+      "n_outer_folds": "4",
+      "mert_macro_f1_fold_mean": "0.8241669808425666",
+      "mert_macro_f1_fold_sd": "0.022016334465571604",
+      "svm_macro_f1_fold_mean": "0.8315820088132717",
+      "svm_macro_f1_fold_sd": "0.03925658993050303",
+      "mert_minus_svm": "-0.007415027970705118"
+    },
+    {
+      "seed_ratio": "0.5",
+      "n_splits": "12",
+      "n_outer_folds": "4",
+      "mert_macro_f1_fold_mean": "0.8599382877561589",
+      "mert_macro_f1_fold_sd": "0.024755214614029034",
+      "svm_macro_f1_fold_mean": "0.8681233528697022",
+      "svm_macro_f1_fold_sd": "0.03955676573603055",
+      "mert_minus_svm": "-0.008185065113543388"
+    }
+  ],
+  "trial_ranges": [
+    {
+      "ratio": 0.05,
+      "held_out_instrument": "Contrabass",
+      "n_trials": 3,
+      "mert_f1_min": 0.6360149772674011,
+      "mert_f1_max": 0.7583192901862061,
+      "svm_f1_min": 0.6017853842418105,
+      "svm_f1_max": 0.7169154343547183,
+      "mert_minus_svm_fold_mean": 0.042408112671951104
+    },
+    {
+      "ratio": 0.05,
+      "held_out_instrument": "Viola",
+      "n_trials": 3,
+      "mert_f1_min": 0.5087426439987087,
+      "mert_f1_max": 0.7725664000611079,
+      "svm_f1_min": 0.38603521561048526,
+      "svm_f1_max": 0.7714353139122312,
+      "mert_minus_svm_fold_mean": 0.047854154643765745
+    },
+    {
+      "ratio": 0.05,
+      "held_out_instrument": "Violin",
+      "n_trials": 3,
+      "mert_f1_min": 0.5978101092087187,
+      "mert_f1_max": 0.7084006957956172,
+      "svm_f1_min": 0.6021195569577645,
+      "svm_f1_max": 0.676091284808488,
+      "mert_minus_svm_fold_mean": 0.013267504611398953
+    },
+    {
+      "ratio": 0.05,
+      "held_out_instrument": "Violoncello",
+      "n_trials": 3,
+      "mert_f1_min": 0.5942578187314431,
+      "mert_f1_max": 0.7454652707585397,
+      "svm_f1_min": 0.6478253820759101,
+      "svm_f1_max": 0.8265953580725359,
+      "mert_minus_svm_fold_mean": -0.08663897481307274
+    },
+    {
+      "ratio": 0.1,
+      "held_out_instrument": "Contrabass",
+      "n_trials": 3,
+      "mert_f1_min": 0.7322185811877249,
+      "mert_f1_max": 0.7708899017175452,
+      "svm_f1_min": 0.6263141515466341,
+      "svm_f1_max": 0.7217514930269938,
+      "mert_minus_svm_fold_mean": 0.0822158669537764
+    },
+    {
+      "ratio": 0.1,
+      "held_out_instrument": "Viola",
+      "n_trials": 3,
+      "mert_f1_min": 0.6731738429875384,
+      "mert_f1_max": 0.7979839012189872,
+      "svm_f1_min": 0.7293160213043695,
+      "svm_f1_max": 0.8491946169264983,
+      "mert_minus_svm_fold_mean": -0.05202909386360962
+    },
+    {
+      "ratio": 0.1,
+      "held_out_instrument": "Violin",
+      "n_trials": 3,
+      "mert_f1_min": 0.7615080122419989,
+      "mert_f1_max": 0.7964219522116224,
+      "svm_f1_min": 0.6891849093917025,
+      "svm_f1_max": 0.7500468939230013,
+      "mert_minus_svm_fold_mean": 0.05740076200877908
+    },
+    {
+      "ratio": 0.1,
+      "held_out_instrument": "Violoncello",
+      "n_trials": 3,
+      "mert_f1_min": 0.7679194012686493,
+      "mert_f1_max": 0.8316731212311165,
+      "svm_f1_min": 0.8214777855416706,
+      "svm_f1_max": 0.8829680661144355,
+      "mert_minus_svm_fold_mean": -0.050797091322646426
+    },
+    {
+      "ratio": 0.2,
+      "held_out_instrument": "Contrabass",
+      "n_trials": 3,
+      "mert_f1_min": 0.7800314241189701,
+      "mert_f1_max": 0.8142474083718737,
+      "svm_f1_min": 0.8294395581122472,
+      "svm_f1_max": 0.8744123290195714,
+      "mert_minus_svm_fold_mean": -0.04720652940066953
+    },
+    {
+      "ratio": 0.2,
+      "held_out_instrument": "Viola",
+      "n_trials": 3,
+      "mert_f1_min": 0.7845468985665016,
+      "mert_f1_max": 0.8542866212932625,
+      "svm_f1_min": 0.8469560385358355,
+      "svm_f1_max": 0.8909960143633745,
+      "mert_minus_svm_fold_mean": -0.05586017998379511
+    },
+    {
+      "ratio": 0.2,
+      "held_out_instrument": "Violin",
+      "n_trials": 3,
+      "mert_f1_min": 0.824773363101485,
+      "mert_f1_max": 0.8576342494859492,
+      "svm_f1_min": 0.7492549383241816,
+      "svm_f1_max": 0.8029435229673236,
+      "mert_minus_svm_fold_mean": 0.06947338509451229
+    },
+    {
+      "ratio": 0.2,
+      "held_out_instrument": "Violoncello",
+      "n_trials": 3,
+      "mert_f1_min": 0.8134700004738361,
+      "mert_f1_max": 0.8530761814098613,
+      "svm_f1_min": 0.7464649613964163,
+      "svm_f1_max": 0.9141670908146056,
+      "mert_minus_svm_fold_mean": 0.0039332124071319585
+    },
+    {
+      "ratio": 0.5,
+      "held_out_instrument": "Contrabass",
+      "n_trials": 3,
+      "mert_f1_min": 0.8384618727645805,
+      "mert_f1_max": 0.8669138172538895,
+      "svm_f1_min": 0.8087181077051181,
+      "svm_f1_max": 0.867680622506132,
+      "mert_minus_svm_fold_mean": 0.014560063699192938
+    },
+    {
+      "ratio": 0.5,
+      "held_out_instrument": "Viola",
+      "n_trials": 3,
+      "mert_f1_min": 0.8305061516782383,
+      "mert_f1_max": 0.8482258992150475,
+      "svm_f1_min": 0.8447607688312082,
+      "svm_f1_max": 0.9143144965582982,
+      "mert_minus_svm_fold_mean": -0.04681320469616057
+    },
+    {
+      "ratio": 0.5,
+      "held_out_instrument": "Violin",
+      "n_trials": 3,
+      "mert_f1_min": 0.8442203275053298,
+      "mert_f1_max": 0.8616476130325701,
+      "svm_f1_min": 0.7913549110046417,
+      "svm_f1_max": 0.8590577023107349,
+      "mert_minus_svm_fold_mean": 0.021322777738013127
+    },
+    {
+      "ratio": 0.5,
+      "held_out_instrument": "Violoncello",
+      "n_trials": 3,
+      "mert_f1_min": 0.8819468683528843,
+      "mert_f1_max": 0.9127617014427191,
+      "svm_f1_min": 0.8946747905579823,
+      "svm_f1_max": 0.9332955634780238,
+      "mert_minus_svm_fold_mean": -0.021809897195219197
+    }
+  ],
+  "difference_intervals_including_zero": 12,
+  "new_model_training": false,
+  "new_checkpoint_inference": false,
+  "new_significance_test": false,
+  "independent_test_datasets_added": 0,
+  "editorial_judgment_is_not_automatically_validated": true
+}

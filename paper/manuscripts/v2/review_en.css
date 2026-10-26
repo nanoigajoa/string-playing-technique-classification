@@ -1,0 +1,28 @@
+
+@page {
+  size: A4; margin: 20mm 19mm 20mm;
+  @bottom-center { content: counter(page) " / " counter(pages); font: 9pt Arial; color: #666; }
+}
+html { color: #171717; background: white; }
+body { font-family: 'Times New Roman', Georgia, serif;
+  font-size: 10.5pt; line-height: 1.5; max-width: 172mm; margin: auto; }
+h1 { font-size: 21pt; line-height: 1.4; font-weight: 700; margin: 0 0 18px; word-break: normal; }
+h2 { font-size: 15pt; line-height: 1.45; margin: 24px 0 10px; }
+h3 { font-size: 11.5pt; line-height: 1.5; margin: 20px 0 8px; }
+h1, h2, h3 { break-after: avoid; }
+p { margin: 0 0 11px; text-align: justify; word-break: normal; overflow-wrap: break-word; orphans: 3; widows: 3; }
+blockquote { margin: 12px 0 20px; padding: 6px 12px; border-left: 2px solid #999; color: #555; font-size: 9pt; }
+table { width: 100%; border-collapse: collapse; font-size: 9pt; line-height: 1.55; margin: 14px 0 18px; break-inside: avoid; }
+caption { text-align: left; font-size: 9.1pt; font-weight: 600; margin-bottom: 7px; }
+th, td { padding: 6px 7px; border-bottom: .5pt solid #bbb; vertical-align: top; }
+thead { border-top: 1pt solid #444; border-bottom: 1pt solid #444; }
+tr { break-inside: avoid; }
+figure { margin: 18px 0; break-inside: avoid; }
+figure img { display: block; width: 100%; height: auto; max-height: 177mm; object-fit: contain; }
+figcaption { margin-top: 9px; font-size: 9pt; line-height: 1.55; text-align: justify; }
+a { color: inherit; text-decoration: none; overflow-wrap: break-word; }
+code { font-family: Menlo, Consolas, monospace; font-size: 8.5pt; }
+math[display=block] { margin: 14px auto; font-size: 11pt; }
+.page-break { break-before: page; }
+.references p { font-size: 9.3pt; line-height: 1.5; text-align: left; break-inside: avoid; }
+@media screen { body { padding: 30px; } }

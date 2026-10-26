@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "run": "repaired self-training smoke test",
+  "generated_at_utc": "2026-09-20T02:47:51.891581+00:00",
+  "not_for_publication": true,
+  "device": "cpu",
+  "split": {
+    "fold": 0,
+    "test_instrument": "Viola",
+    "seed_ratio": 0.05,
+    "trial": 0,
+    "labeled_n": 123,
+    "unlabeled_n": 2346,
+    "test_n": 933
+  },
+  "training": {
+    "selection_contract": "argmax fixed observed-label selector macro F1",
+    "test_access_during_training": false,
+    "hidden_unlabeled_target_access": false,
+    "tau": 0.7,
+    "selected_iteration": 1,
+    "selector_macro_f1": [
+      0.687142857142857,
+      0.7679487179487179
+    ],
+    "early_stop_macro_f1": [
+      0.775,
+      0.7465240641711229
+    ],
+    "checkpoint_sha256": [
+      "bba98f94c7b22a238ffdc5945d4909dc146f56f444ab466d401d2d1912ba378e",
+      "6b96a50d1c89e0c011e7bef7c7435c7a81d351be520f95602caccc308c66a864"
+    ],
+    "selected_checkpoint_sha256": "6b96a50d1c89e0c011e7bef7c7435c7a81d351be520f95602caccc308c66a864",
+    "acceptance": [
+      {
+        "iteration": 0,
+        "status": "pseudo_targets_added_for_next_iteration",
+        "accepted": 11,
+        "remaining": 2335,
+        "accepted_indices_sha256": "cfbef6b8b1a7dced7baab62f9324c671a8ff19e96656b244618c1acf3b0a04e6",
+        "accepted_targets_sha256": "29e16c91456556cc1817341204562c6ae5bda5f6f735d94672cad4dbf61db0ff"
+      },
+      {
+        "iteration": 1,
+        "status": "not_run_after_final_checkpoint",
+        "accepted": 0,
+        "remaining": 2335
+      }
+    ],
+    "training_pool_by_iteration": [
+      {
+        "n_examples": 78,
+        "source_counts": {
+          "observed": 78
+        },
+        "indices_sha256": "65a0f840cb1f2641b622c36451e7af4fd687218a73544810be7a6d8128026f30",
+        "targets_sha256": "312b10859b70fbdef0e1046d65cc0318a87602f6ffecbb258738a35a4496f46e"
+      },
+      {
+        "n_examples": 89,
+        "source_counts": {
+          "observed": 78,
+          "pseudo": 11
+        },
+        "indices_sha256": "cf5ed82af80b70231cf29ff73aa408d2a37f67ca3fc5e4a8d7df30a0b9aa7f3c",
+        "targets_sha256": "592474eb5257afc0e1aa1b4bf7e94b574190f89b16a531a8f8226b8bdd86f09a"
+      }
+    ],
+    "selected_training_pool": {
+      "n_examples": 89,
+      "source_counts": {
+        "observed": 78,
+        "pseudo": 11
+      },
+      "indices_sha256": "cf5ed82af80b70231cf29ff73aa408d2a37f67ca3fc5e4a8d7df30a0b9aa7f3c",
+      "targets_sha256": "592474eb5257afc0e1aa1b4bf7e94b574190f89b16a531a8f8226b8bdd86f09a"
+    },
+    "fixed_partitions": {
+      "train_observed_indices_sha256": "65a0f840cb1f2641b622c36451e7af4fd687218a73544810be7a6d8128026f30",
+      "early_stop_indices_sha256": "545aaf1b2f764399cea279c5db3f0ff9cdc2a30d295fca6a8f37b3ada7284ede",
+      "selector_indices_sha256": "8af42eb2064614b55aa00bf581824844486efc5c5a526df732e19617e2bc51de",
+      "early_stop_n": 20,
+      "selector_n": 25
+    }
+  },
+  "test_evaluation_count": 1,
+  "test_metrics": {
+    "macro_f1": 0.6030674241881139,
+    "per_class_f1": [
+      0.8143236074270557,
+      0.7635135135135135,
+      0.9236111111111112,
+      0.0,
+      0.5138888888888888
+    ],
+    "confusion_matrix": [
+      [
+        307,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        113,
+        0,
+        0,
+        43
+      ],
+      [
+        43,
+        0,
+        266,
+        0,
+        0
+      ],
+      [
+        95,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        27,
+        0,
+        0,
+        37
+      ]
+    ],
+    "predictions_sha256": "05eef74794c3cd1163b8edefd039f79121610efd52c05287d7f9f9ac8e028121",
+    "probabilities_sha256": "2802ef68ebe9ff09f48e157bdf5e710f7bad53f6748008c4d8d4679a3aa4339c"
+  }
+}

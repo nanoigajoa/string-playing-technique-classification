@@ -1,0 +1,22 @@
+{
+  "source_script_sha256": "94de669230414f4cec2657c1e2ef9e6e947dfe900a36a63bc938cfe44ceea81e",
+  "inputs": {
+    "mert_svm/canonical_summary.csv": "c8259a01b2536fa7b545301ad131fc19e8d327addb23e51af452fef8892258f1",
+    "self_training/canonical_summary.csv": "440e9d18f010e4bbcbebe5a61d0b386d5df8d57e113da06fe492e6e849c54d68",
+    "verification/bootstrap_sensitivity.csv": "65eb73747cf7792e3fd48e287ec2dbc8cdc6d8cbca02fcc31a2a2634e79e5bdd",
+    "verification/confusion_counts.csv": "3aeac1c0199114f378f6121cd7d1622c39135b37ff66ab1d2828acd1a77f7eda",
+    "self_training/confusion_counts.csv": "6e225599b37232c27a59e6867a2a67619bda204c1be608bb2f21e0a5962004c4"
+  },
+  "outputs": {
+    "figure1_budget_curves.pdf": "0a1d36bed6e7f7b947a022fea33d14072fa1ca4d33689e4dd58dd6dd78d56557",
+    "figure1_budget_curves.png": "c5abd58f3c945b048ab49194a594cb9165bf72ba438e05894f5f2baffb5879b4",
+    "figure2_resampling_units.pdf": "f882c3af0cd10bb66852c422b1ee474a3810edcd81912f9635ed1b84b25a9b52",
+    "figure2_resampling_units.png": "ba5c230dcee89e87ccec6d386d71cb28d47b4d6f785bb00cb2f3a4a152b9cf54",
+    "figure3_confusions.pdf": "59245407e2a9409fc490d4bf4cf6ee709025f49d751c55852209e7126875b82f",
+    "figure3_confusions.png": "46786d6354689f8f5dd719029aa0f494c00966f90cf6f307cab26c04c113ce0e"
+  },
+  "dpi": 300,
+  "point_estimate": "Mean trials within type, then mean four instrument types",
+  "intervals": "1000 paired percentile draws conditional on fixed predictions; no population inference",
+  "confusions": "Row-normalized pooled counts, three repeated predictions per clip"
+}

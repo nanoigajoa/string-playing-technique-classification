@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "mode": "saved_predictions_only",
+  "passed": true,
+  "checkpoint_inference_performed": false,
+  "training_performed": false,
+  "prediction_files_checked": 100,
+  "model_prediction_vectors_checked": 244,
+  "tables_checked": 10,
+  "absolute_metric_tolerance": 1e-12,
+  "draws": 1000,
+  "seed": 20260928,
+  "environment": {
+    "python": "3.14.5",
+    "numpy": "2.4.6",
+    "pandas": "3.0.6"
+  },
+  "release_manifest_sha256": "d5e7eadbdb085c8f8f2a0a48751aa6bd94b4d0dc021001f3dc8894dcb1b83a7d",
+  "output_sha256": {
+    "mert_svm/canonical_results.csv": "2757ce8b190bf3ecd8b95a0bce9a85cf483b30d4572e2a6b7d50458e9e69b71a",
+    "mert_svm/canonical_summary.csv": "e3481d940243f36c66f191fd7601a2d8dd283c96b2b0f5250467d4326a563998",
+    "cnn/canonical_results.csv": "077d9a25df69bb9d859794e68ffa62cdaca26f0636b93a6620d3abd0e7c50dfa",
+    "self_training/canonical_results.csv": "5368e252a681f4f6b6eac7984f5fb85137f2b2f67ffad34fa22846e474120976",
+    "self_training/canonical_summary.csv": "ed7816a22bf76cd7e4695fdb9277d3502dddd9d673f2c7c04289d293b88d4533",
+    "self_training/per_class_f1.csv": "aecbfffc9489adcf572a2234d39d4794b596abf1501bbb09187b1f973eea23d8",
+    "self_training/confusion_counts.csv": "6e225599b37232c27a59e6867a2a67619bda204c1be608bb2f21e0a5962004c4",
+    "verification/per_class_f1.csv": "b840edc00e9dfb18c01a77d1d8186c2dfe0c94b9039f4c0d412fb72e2cc6cd08",
+    "verification/confusion_counts.csv": "1057e62e6a057e9c5dea81cf93f5935091ca32e1f466dacd6876b14c6adc017c",
+    "verification/bootstrap_sensitivity.csv": "62b360232f12af248ddf79f60bd5d46f931c87d983cea7cde71619df78f628bc"
+  }
+}

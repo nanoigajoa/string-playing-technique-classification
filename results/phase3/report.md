@@ -6,7 +6,7 @@
 
 ## 1. Feature Group Importance (dimensionality-corrected)
 
-> Raw sum inflates groups with more features (MFCC has 80 dims vs Flux 4 dims).
+> Raw sum inflates groups with more features (MFCC+Δ+ΔΔ has 156 dims vs Flux 4 dims).
 > Right column shows per-feature mean — the dimensionality-corrected ranking.
 
 | Rank | Group | n features | Raw sum | Per-feature mean |

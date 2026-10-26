@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "mode": "manuscript_table_and_artifact_consistency",
+  "numeric_tables_checked": 6,
+  "training_configuration_table": "manually checked against source code",
+  "figures": 6,
+  "tables": 7,
+  "references": 11,
+  "self_training_class_deltas_checked": {
+    "ordinario": -0.02422574522732257,
+    "pizzicato_secco": -0.05020304878616344,
+    "tremolo": -0.011789198333554407,
+    "sul_ponticello": -0.038114672795839355,
+    "col_legno_battuto": -0.03673045613674558
+  },
+  "content_markers_checked_across_exports": 5,
+  "pdf_pages": 19,
+  "manuscript_characters": 28513,
+  "whitespace_tokens": 6109,
+  "figure_inputs_and_outputs_hash_verified": true,
+  "docx_zip_and_structure": "passed",
+  "pdf_korean_and_caption_text": "passed",
+  "new_model_training": false,
+  "manual_layout_review": "see REVIEW.md; not established by this script"
+}

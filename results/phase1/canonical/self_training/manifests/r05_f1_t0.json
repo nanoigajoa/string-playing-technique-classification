@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-28T14:00:01.394894+00:00",
+  "training_code_sha256": "61a63f3e987c6a33e041bdd1998fe56ded108c1f9c118855fd7938179233d724",
+  "repaired_core_sha256": "1087e46fc96cf6a4a9a7ce284a336ddf4d436b6244047a9d5247a622f64d0e1b",
+  "key": "r05_f1_t0",
+  "fold": 1,
+  "held_out_instrument": "Violin",
+  "seed_ratio": 0.05,
+  "trial": 0,
+  "seed": 625100,
+  "tau": 0.8,
+  "epochs": 150,
+  "patience": 15,
+  "max_iter": 5,
+  "observed_index_sha256": "daaea14c633804440c9701dd7d655df6d60eaf5962c139319e73213ef71e8a6c",
+  "unlabeled_index_sha256": "03e4f677dc45cf32c206fc5e334f08f9b96fab4a4013e0222a1ed84f84b50f6a",
+  "test_index_sha256": "01a28d8306afb761fac61dcd401b5f14e8bc2508bb1b29847bf04592c75c3367",
+  "conditions": {
+    "supervised": {
+      "training": {
+        "selection_contract": "argmax fixed observed-label selector macro F1",
+        "test_access_during_training": false,
+        "hidden_unlabeled_target_access": false,
+        "tau": 0.8,
+        "selected_iteration": 0,
+        "selector_macro_f1": [
+          0.758235294117647
+        ],
+        "early_stop_macro_f1": [
+          0.6214285714285714
+        ],
+        "checkpoint_sha256": [
+          "9964b16f347c41c5e94ac554ff4c7b1f39f4b93b1b8b85d66858895a428d8d69"
+        ],
+        "selected_checkpoint_sha256": "9964b16f347c41c5e94ac554ff4c7b1f39f4b93b1b8b85d66858895a428d8d69",
+        "acceptance": [
+          {
+            "iteration": 0,
+            "status": "not_run_after_final_checkpoint",
+            "accepted": 0,
+            "remaining": 2398
+          }
+        ],
+        "training_pool_by_iteration": [
+          {
+            "n_examples": 80,
+            "source_counts": {
+              "observed": 80
+            },
+            "indices_sha256": "cb06897b13a4807a8151c48be3110ea9475f7c9830eda0ed3e0a0f0e12f81b26",
+            "targets_sha256": "7d8f6a12c05fd2653729a0dadd4f2a8119459e63eee11ff444ae9cc85e2e7efb"
+          }
+        ],
+        "selected_training_pool": {
+          "n_examples": 80,
+          "source_counts": {
+            "observed": 80
+          },
+          "indices_sha256": "cb06897b13a4807a8151c48be3110ea9475f7c9830eda0ed3e0a0f0e12f81b26",
+          "targets_sha256": "7d8f6a12c05fd2653729a0dadd4f2a8119459e63eee11ff444ae9cc85e2e7efb"
+        },
+        "fixed_partitions": {
+          "train_observed_indices_sha256": "cb06897b13a4807a8151c48be3110ea9475f7c9830eda0ed3e0a0f0e12f81b26",
+          "early_stop_indices_sha256": "ac230e1e34e618f55ccffdb126d4b8e9cb9733473bce0ca25cccee1b03793e91",
+          "selector_indices_sha256": "84f94b754367303986163c1889309872008cf1f8b6333831f10679bfab21fc1e",
+          "early_stop_n": 20,
+          "selector_n": 25
+        }
+      },
+      "test_metrics": {
+        "macro_f1": 0.7118256897226759,
+        "per_class_f1": [
+          0.7037037037037037,
+          0.9108910891089109,
+          0.8968903436988543,
+          0.40764331210191085,
+          0.64
+        ],
+        "confusion_matrix": [
+          [
+            171,
+            0,
+            47,
+            66,
+            0
+          ],
+          [
+            0,
+            184,
+            0,
+            0,
+            5
+          ],
+          [
+            10,
+            0,
+            274,
+            1,
+            0
+          ],
+          [
+            21,
+            0,
+            5,
+            32,
+            0
+          ],
+          [
+            0,
+            31,
+            0,
+            0,
+            32
+          ]
+        ]
+      },
+      "checkpoint": "models/phase1/canonical/self_training/r05_f1_t0/supervised.pt",
+      "checkpoint_sha256": "01ccd390c91213f6dda4ddf29146c6ebc6a2843adf5eca219b73a25c85705843",
+      "prediction_sha256": "3f8951efbbc60d210766b1cdc498634e6b1b73be8b7f334305459843c3c16d51",
+      "test_evaluation_count": 1
+    },
+    "pseudo": {
+      "training": {
+        "selection_contract": "argmax fixed observed-label selector macro F1",
+        "test_access_during_training": false,
+        "hidden_unlabeled_target_access": false,
+        "tau": 0.8,
+        "selected_iteration": 0,
+        "selector_macro_f1": [
+          0.758235294117647
+        ],
+        "early_stop_macro_f1": [
+          0.6214285714285714
+        ],
+        "checkpoint_sha256": [
+          "9964b16f347c41c5e94ac554ff4c7b1f39f4b93b1b8b85d66858895a428d8d69"
+        ],
+        "selected_checkpoint_sha256": "9964b16f347c41c5e94ac554ff4c7b1f39f4b93b1b8b85d66858895a428d8d69",
+        "acceptance": [
+          {
+            "iteration": 0,
+            "status": "pseudo_targets_added_for_next_iteration",
+            "accepted": 0,
+            "remaining": 2398,
+            "accepted_indices": [],
+            "accepted_targets": [],
+            "accepted_indices_sha256": "4b9af4b1e2313aba5a9a139ae3ecfc8fcae09a440c65802207a26775700f6eca",
+            "accepted_targets_sha256": "4b9af4b1e2313aba5a9a139ae3ecfc8fcae09a440c65802207a26775700f6eca"
+          }
+        ],
+        "training_pool_by_iteration": [
+          {
+            "n_examples": 80,
+            "source_counts": {
+              "observed": 80
+            },
+            "indices_sha256": "cb06897b13a4807a8151c48be3110ea9475f7c9830eda0ed3e0a0f0e12f81b26",
+            "targets_sha256": "7d8f6a12c05fd2653729a0dadd4f2a8119459e63eee11ff444ae9cc85e2e7efb"
+          }
+        ],
+        "selected_training_pool": {
+          "n_examples": 80,
+          "source_counts": {
+            "observed": 80
+          },
+          "indices_sha256": "cb06897b13a4807a8151c48be3110ea9475f7c9830eda0ed3e0a0f0e12f81b26",
+          "targets_sha256": "7d8f6a12c05fd2653729a0dadd4f2a8119459e63eee11ff444ae9cc85e2e7efb"
+        },
+        "fixed_partitions": {
+          "train_observed_indices_sha256": "cb06897b13a4807a8151c48be3110ea9475f7c9830eda0ed3e0a0f0e12f81b26",
+          "early_stop_indices_sha256": "ac230e1e34e618f55ccffdb126d4b8e9cb9733473bce0ca25cccee1b03793e91",
+          "selector_indices_sha256": "84f94b754367303986163c1889309872008cf1f8b6333831f10679bfab21fc1e",
+          "early_stop_n": 20,
+          "selector_n": 25
+        }
+      },
+      "test_metrics": {
+        "macro_f1": 0.7118256897226759,
+        "per_class_f1": [
+          0.7037037037037037,
+          0.9108910891089109,
+          0.8968903436988543,
+          0.40764331210191085,
+          0.64
+        ],
+        "confusion_matrix": [
+          [
+            171,
+            0,
+            47,
+            66,
+            0
+          ],
+          [
+            0,
+            184,
+            0,
+            0,
+            5
+          ],
+          [
+            10,
+            0,
+            274,
+            1,
+            0
+          ],
+          [
+            21,
+            0,
+            5,
+            32,
+            0
+          ],
+          [
+            0,
+            31,
+            0,
+            0,
+            32
+          ]
+        ]
+      },
+      "checkpoint": "models/phase1/canonical/self_training/r05_f1_t0/pseudo.pt",
+      "checkpoint_sha256": "a0137c55c1cd4b9952b80653cc3b7f61c238de84a583cfbeeb3369edd55f292b",
+      "prediction_sha256": "3f8951efbbc60d210766b1cdc498634e6b1b73be8b7f334305459843c3c16d51",
+      "test_evaluation_count": 1
+    },
+    "oracle": {
+      "training": {
+        "selection_contract": "argmax observed selector macro F1",
+        "privileged_oracle_access": true,
+        "selector_macro_f1": [
+          0.758235294117647
+        ],
+        "selected_iteration": 0,
+        "accepted_counts": [],
+        "oracle_target_source": "labels[unlabeled_idx] only in this control"
+      },
+      "test_metrics": {
+        "macro_f1": 0.7118256897226759,
+        "per_class_f1": [
+          0.7037037037037037,
+          0.9108910891089109,
+          0.8968903436988543,
+          0.40764331210191085,
+          0.64
+        ],
+        "confusion_matrix": [
+          [
+            171,
+            0,
+            47,
+            66,
+            0
+          ],
+          [
+            0,
+            184,
+            0,
+            0,
+            5
+          ],
+          [
+            10,
+            0,
+            274,
+            1,
+            0
+          ],
+          [
+            21,
+            0,
+            5,
+            32,
+            0
+          ],
+          [
+            0,
+            31,
+            0,
+            0,
+            32
+          ]
+        ]
+      },
+      "checkpoint": "models/phase1/canonical/self_training/r05_f1_t0/oracle.pt",
+      "checkpoint_sha256": "5623b14b3fc2a4d0bd22d0c4e160c3ae5caf5198eba82b75722d57cc95d2da5e",
+      "prediction_sha256": "3f8951efbbc60d210766b1cdc498634e6b1b73be8b7f334305459843c3c16d51",
+      "test_evaluation_count": 1
+    }
+  },
+  "predictions": "results/phase1/canonical/self_training/predictions/r05_f1_t0.npz",
+  "predictions_sha256": "d194a1e1c08334160819135ae3bbb936326e60e82f212bc5e877caee13b615f3"
+}

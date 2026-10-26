@@ -1,0 +1,251 @@
+{
+  "generated_at_utc": "2026-09-07T17:29:18.721585+00:00",
+  "script_sha256": "486c5ec6e83336864f61d9a336f8b158b02593eff93ef14915403e8538611213",
+  "metadata_sha256": {
+    "data/mert_meta.csv": "5dc2a867759c39ce1b2f870093ab0c9a3d5c82e6e10a72cc51afe0d223f6825f",
+    "data/philharmonia_mert_meta.csv": "ec384433163daa73c92a425f0bda24227143340de0803355fad83f572dd7a10c"
+  },
+  "scope": "Local file existence, byte hashes, filename labels; no decoding or training.",
+  "orchidea": {
+    "metadata_rows": 3402,
+    "coverage": {
+      "Contrabass": {
+        "ordinario": 309,
+        "pizzicato_secco": 165,
+        "tremolo": 228,
+        "sul_ponticello": 76,
+        "col_legno_battuto": 55
+      },
+      "Viola": {
+        "ordinario": 309,
+        "pizzicato_secco": 156,
+        "tremolo": 309,
+        "sul_ponticello": 95,
+        "col_legno_battuto": 64
+      },
+      "Violin": {
+        "ordinario": 284,
+        "pizzicato_secco": 189,
+        "tremolo": 285,
+        "sul_ponticello": 58,
+        "col_legno_battuto": 63
+      },
+      "Violoncello": {
+        "ordinario": 291,
+        "pizzicato_secco": 129,
+        "tremolo": 219,
+        "sul_ponticello": 73,
+        "col_legno_battuto": 45
+      }
+    },
+    "proxy_key_count": 567,
+    "proxy_keys_with_multiple_labels": 543,
+    "metadata_matched_contrasts": [
+      {
+        "instrument": "Contrabass",
+        "contrast": "ordinario/tremolo",
+        "matching_proxy_keys": 120
+      },
+      {
+        "instrument": "Contrabass",
+        "contrast": "ordinario/sul_ponticello",
+        "matching_proxy_keys": 40
+      },
+      {
+        "instrument": "Viola",
+        "contrast": "ordinario/tremolo",
+        "matching_proxy_keys": 147
+      },
+      {
+        "instrument": "Viola",
+        "contrast": "ordinario/sul_ponticello",
+        "matching_proxy_keys": 41
+      },
+      {
+        "instrument": "Violin",
+        "contrast": "ordinario/tremolo",
+        "matching_proxy_keys": 138
+      },
+      {
+        "instrument": "Violin",
+        "contrast": "ordinario/sul_ponticello",
+        "matching_proxy_keys": 37
+      },
+      {
+        "instrument": "Violoncello",
+        "contrast": "ordinario/tremolo",
+        "matching_proxy_keys": 138
+      },
+      {
+        "instrument": "Violoncello",
+        "contrast": "ordinario/sul_ponticello",
+        "matching_proxy_keys": 46
+      }
+    ]
+  },
+  "philharmonia": {
+    "all_local_strings_mp3": 4477,
+    "mapped_rows": 3349,
+    "coverage": {
+      "cello": {
+        "ordinario": 747,
+        "col_legno_battuto": 18,
+        "tremolo": 6,
+        "sul_ponticello": 1,
+        "pizzicato_secco": 2
+      },
+      "double bass": {
+        "ordinario": 764,
+        "pizzicato_secco": 15,
+        "tremolo": 3,
+        "col_legno_battuto": 10,
+        "sul_ponticello": 1
+      },
+      "viola": {
+        "ordinario": 709,
+        "pizzicato_secco": 39,
+        "tremolo": 6,
+        "col_legno_battuto": 1,
+        "sul_ponticello": 1
+      },
+      "violin": {
+        "ordinario": 852,
+        "tremolo": 42,
+        "pizzicato_secco": 49,
+        "sul_ponticello": 39,
+        "col_legno_battuto": 44
+      }
+    },
+    "embedded_rows": 577,
+    "pools": {
+      "a": {
+        "rows": 403,
+        "coverage": {
+          "cello": {
+            "col_legno_battuto": 13,
+            "sul_ponticello": 1,
+            "pizzicato_secco": 2,
+            "tremolo": 4,
+            "ordinario": 53
+          },
+          "double bass": {
+            "pizzicato_secco": 9,
+            "tremolo": 1,
+            "col_legno_battuto": 6,
+            "sul_ponticello": 1,
+            "ordinario": 48
+          },
+          "viola": {
+            "pizzicato_secco": 24,
+            "tremolo": 5,
+            "col_legno_battuto": 1,
+            "sul_ponticello": 1,
+            "ordinario": 57
+          },
+          "violin": {
+            "tremolo": 30,
+            "pizzicato_secco": 38,
+            "col_legno_battuto": 31,
+            "sul_ponticello": 26,
+            "ordinario": 52
+          }
+        },
+        "missing_paths": []
+      },
+      "b": {
+        "rows": 174,
+        "coverage": {
+          "cello": {
+            "tremolo": 2,
+            "col_legno_battuto": 5,
+            "ordinario": 28
+          },
+          "double bass": {
+            "pizzicato_secco": 6,
+            "col_legno_battuto": 4,
+            "tremolo": 2,
+            "ordinario": 18
+          },
+          "viola": {
+            "pizzicato_secco": 15,
+            "tremolo": 1,
+            "ordinario": 20
+          },
+          "violin": {
+            "sul_ponticello": 13,
+            "col_legno_battuto": 13,
+            "pizzicato_secco": 11,
+            "tremolo": 12,
+            "ordinario": 24
+          }
+        },
+        "missing_paths": []
+      }
+    }
+  },
+  "missing_mapped_files": [],
+  "byte_duplicate_groups_mapped": [
+    [
+      "data/philharmonia/Strings/cello/cello_Ds5_05_forte_arco-normal.mp3",
+      "data/philharmonia/Strings/viola/viola_G6_05_fortissimo_arco-normal.mp3"
+    ]
+  ],
+  "erhu": {
+    "wav_paths": 2523,
+    "unique_file_hashes": 1253,
+    "directory_counts": {
+      "test_data/11 classes/detache": 23,
+      "test_data/11 classes/diangong": 22,
+      "test_data/11 classes/harmonic": 12,
+      "test_data/11 classes/legato&slide&glissando": 50,
+      "test_data/11 classes/percussive": 17,
+      "test_data/11 classes/pizzicato": 16,
+      "test_data/11 classes/ricochet": 30,
+      "test_data/11 classes/staccato": 36,
+      "test_data/11 classes/tremolo": 30,
+      "test_data/11 classes/trill": 47,
+      "test_data/11 classes/vibrato": 43,
+      "test_data/4 classes/chanyin": 28,
+      "test_data/4 classes/dungong": 36,
+      "test_data/4 classes/huayin": 23,
+      "test_data/4 classes/others": 62,
+      "test_data/7 classes/chanyin": 16,
+      "test_data/7 classes/dungong": 36,
+      "test_data/7 classes/lianxianhuayin": 9,
+      "test_data/7 classes/others": 66,
+      "test_data/7 classes/shangchanyin": 12,
+      "test_data/7 classes/shanghuayin": 4,
+      "test_data/7 classes/xiahuayin": 6,
+      "train_data/11 classes/detache": 72,
+      "train_data/11 classes/diangong": 28,
+      "train_data/11 classes/harmonic": 18,
+      "train_data/11 classes/legato&slide&glissando": 114,
+      "train_data/11 classes/percussive": 21,
+      "train_data/11 classes/pizzicato": 95,
+      "train_data/11 classes/ricochet": 36,
+      "train_data/11 classes/staccato": 141,
+      "train_data/11 classes/tremolo": 144,
+      "train_data/11 classes/trill": 202,
+      "train_data/11 classes/vibrato": 56,
+      "train_data/4 classes/其他": 121,
+      "train_data/4 classes/滑音": 52,
+      "train_data/4 classes/顿弓": 141,
+      "train_data/4 classes/颤音": 172,
+      "train_data/7 classes/上滑音": 16,
+      "train_data/7 classes/上颤音": 31,
+      "train_data/7 classes/下滑音": 16,
+      "train_data/7 classes/其他": 125,
+      "train_data/7 classes/连线滑音": 16,
+      "train_data/7 classes/顿弓": 141,
+      "train_data/7 classes/颤音": 141
+    },
+    "note": "4/7/11-class views must not be counted as independent observations."
+  },
+  "quartet_audio_files": 0,
+  "limitations": [
+    "No performer or session ID in inspected OrchideaSOL/Philharmonia metadata.",
+    "Byte hashes do not detect transcoded or acoustically similar recordings.",
+    "Filename label mappings have not been validated by expert listening.",
+    "No new independent confirmation cohort established."
+  ]
+}

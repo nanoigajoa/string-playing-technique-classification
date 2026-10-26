@@ -1,0 +1,15 @@
+{
+  "root": "repository root",
+  "files": {
+    "paper/manuscripts/v2/주법분류_논문초안_국문_v2.md": "b9aa5d6b107773feede89e911125a7e05a137a28daf63f226f48e4791a7c43b8",
+    "paper/manuscripts/v2/주법분류_논문초안_국문_v2.docx": "f0e397247dea2d0d27a570e5563a03323dc811b7a343b41930712fcdaf861239",
+    "paper/manuscripts/v2/review_ko_v2.pdf": "a0193bc02250cc7252b4a0d3be9540ad8e67bc66ea593e5b73f5016a1b188f83",
+    "paper/manuscripts/v2/review_ko_v2.html": "4c53622791bc9f7373498453dd1ee836f1202b5db47f866a51c8ad9bff624027",
+    "paper/manuscripts/v2/review_ko.css": "20c5a13159b85a282904d26d0d458e6e580cb1bac496304abc12242b58a112b2",
+    "paper/manuscripts/v2/figures/manifest.json": "c06939e57a26d3fddf86a2577fb0f6e2ebb0c644f2d2f5031275e931a1cfaa9c",
+    "paper/manuscripts/v2/VERIFICATION.json": "e71469493efe0d9a2902a7a4b9b4469ba8741c7f0fd542f45baac8cf6e5752c0",
+    "src/phase1_paper_v2_figures.py": "ef27467233bc4e50706f5ed034de201fe9412fcbf687bdb726ebade528306034",
+    "src/phase1_paper_v2_export.py": "e31864c4f05e61546eaf907ea05fa7b115ba2468e5d6aa73998454caa913cafa",
+    "src/phase1_paper_v2_verify.py": "fee8c972a3775dd4eade80376432dddc5191a303675f0259d0deb235ffc384e2"
+  }
+}

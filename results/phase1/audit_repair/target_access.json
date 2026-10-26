@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "audit": "phase1 self-training label and selector boundary",
+  "mode": "sentinel",
+  "generated_at_utc": "2026-09-06T14:02:02.884470+00:00",
+  "overall_status": "expected_target_boundary_violation_reproduced",
+  "success": true,
+  "interpretation": {
+    "target": "Accepted unlabeled indices are later resolved through labels[index]; pseudo_lbl is diagnostic only and is not the gradient target.",
+    "iteration_selector": "The stored iteration is validation-selected and the selected iteration's test score is reported; these saved rows are internally consistent.",
+    "tau_selector": "write_report compares best_st_f1 across tau values, so its best-tau headline is selected using test-derived scores and must not be treated as an independent estimate.",
+    "scope": "This proves the target data-flow defect in the inspected revision. It does not estimate the corrected self-training performance or attribute every prior result to one cause."
+  },
+  "sources": [
+    {
+      "path": "src/phase1_rerun.py",
+      "sha256": "477decbefa63a55a418c08ddfcf5ba3ded1bafb558e6bab37984058fa6794469",
+      "bytes": 11907
+    },
+    {
+      "path": "src/phase1_selftraining.py",
+      "sha256": "c8d46750242d9ec14452c1b5245ceb91b2b1172825370b1e5942f6640545c2b6",
+      "bytes": 16562
+    },
+    {
+      "path": "notebooks/04_phase1.ipynb",
+      "sha256": "953a9f26448fd40c03cfb7760b1314ea1b7e7ab9cadcae6f919da3485979b16f",
+      "bytes": 37180
+    },
+    {
+      "path": "results/phase1/all_results.csv",
+      "sha256": "a017029dc8f464f372e440729eef7a24efbf72998c5082e2ab712d9b87be052e",
+      "bytes": 21199
+    }
+  ],
+  "static_source_audit": {
+    "signatures": {
+      "make_tensors_reads_global_labels_by_index": true,
+      "pseudo_labels_are_computed": true,
+      "accepted_global_indices_enter_labeled_pool": true,
+      "pseudo_target_mapping_enters_labeled_pool": false,
+      "iteration_selector_uses_validation_scores": true,
+      "iteration_result_reads_test_score_at_selected_iteration": true,
+      "report_tau_selector_uses_test_derived_best_st_f1": true
+    },
+    "classification": {
+      "target_path": "oracle-label-by-global-index",
+      "iteration_selector": "validation-score argmax",
+      "tau_headline_selector": "test-derived score comparison"
+    },
+    "evidence_lines": [
+      {
+        "line": 72,
+        "text": "y = torch.tensor(labels[idx],     dtype=torch.long).to(DEVICE)"
+      },
+      {
+        "line": 121,
+        "text": "lab = labels[idx]"
+      },
+      {
+        "line": 163,
+        "text": "max_prob, pseudo_lbl = probs.max(axis=1), probs.argmax(axis=1)"
+      },
+      {
+        "line": 179,
+        "text": "labeled_pool  = labeled_pool + unlabeled_idx[accept_mask].tolist()"
+      },
+      {
+        "line": 184,
+        "text": "sel_iter = int(np.argmax(val_sel_f1)) if val_sel_f1 else -1"
+      },
+      {
+        "line": 261,
+        "text": ".groupby('fold')['best_st_f1'].mean())"
+      }
+    ]
+  },
+  "synthetic_target_audit": {
+    "fixture": {
+      "accepted_indices": [
+        2,
+        4
+      ],
+      "note": "Sentinels 9002/9004 are trace markers; no real loss is evaluated."
+    },
+    "provenance_trace": [
+      {
+        "global_index": 2,
+        "embedding": [
+          2.0,
+          2.1
+        ],
+        "oracle_a": 4,
+        "oracle_sentinel": 9002,
+        "pseudo_a": 1,
+        "pseudo_b": 2,
+        "current_gradient_target_a": 4,
+        "current_gradient_target_after_oracle_mutation": 9002,
+        "current_gradient_target_after_pseudo_mutation": 4,
+        "repaired_gradient_target_a": 1,
+        "repaired_gradient_target_after_oracle_mutation": 1,
+        "repaired_gradient_target_after_pseudo_mutation": 2
+      },
+      {
+        "global_index": 4,
+        "embedding": [
+          4.0,
+          4.1
+        ],
+        "oracle_a": 0,
+        "oracle_sentinel": 9004,
+        "pseudo_a": 3,
+        "pseudo_b": 4,
+        "current_gradient_target_a": 0,
+        "current_gradient_target_after_oracle_mutation": 9004,
+        "current_gradient_target_after_pseudo_mutation": 0,
+        "repaired_gradient_target_a": 3,
+        "repaired_gradient_target_after_oracle_mutation": 3,
+        "repaired_gradient_target_after_pseudo_mutation": 4
+      }
+    ],
+    "current_path": {
+      "target_accessor": "global_labels[accepted_global_index]",
+      "assertions": [
+        {
+          "name": "unlabeled_oracle_mutation_does_not_change_training_input",
+          "expected": "same accepted embeddings",
+          "observed": "before=[[2.0, 2.1], [4.0, 4.1]]; after=[[2.0, 2.1], [4.0, 4.1]]",
+          "passed": true,
+          "expected_to_pass": true,
+          "expectation_met": true,
+          "assertion_message": null
+        },
+        {
+          "name": "unlabeled_oracle_mutation_does_not_change_gradient_target",
+          "expected": "same target values",
+          "observed": "before=[4, 0]; after=[9002, 9004]",
+          "passed": false,
+          "expected_to_pass": false,
+          "expectation_met": true,
+          "assertion_message": "gradient target depends on hidden unlabeled truth: [4, 0] != [9002, 9004]"
+        },
+        {
+          "name": "pseudo_target_mutation_changes_gradient_target",
+          "expected": "different target values",
+          "observed": "before=[4, 0]; after=[4, 0]",
+          "passed": false,
+          "expected_to_pass": false,
+          "expectation_met": true,
+          "assertion_message": "gradient target ignores pseudo-label changes: both were [4, 0]"
+        }
+      ],
+      "expected_failures_reproduced": true
+    },
+    "repaired_reference_path": {
+      "target_accessor": "pseudo_target_by_global_index[accepted_global_index]",
+      "assertions": [
+        {
+          "name": "unlabeled_oracle_mutation_does_not_change_training_input",
+          "expected": "same accepted embeddings",
+          "observed": "before=[[2.0, 2.1], [4.0, 4.1]]; after=[[2.0, 2.1], [4.0, 4.1]]",
+          "passed": true,
+          "expected_to_pass": true,
+          "expectation_met": true,
+          "assertion_message": null
+        },
+        {
+          "name": "unlabeled_oracle_mutation_does_not_change_gradient_target",
+          "expected": "same target values",
+          "observed": "before=[1, 3]; after=[1, 3]",
+          "passed": true,
+          "expected_to_pass": true,
+          "expectation_met": true,
+          "assertion_message": null
+        },
+        {
+          "name": "pseudo_target_mutation_changes_gradient_target",
+          "expected": "different target values",
+          "observed": "before=[1, 3]; after=[2, 4]",
+          "passed": true,
+          "expected_to_pass": true,
+          "expectation_met": true,
+          "assertion_message": null
+        }
+      ],
+      "all_assertions_passed": true
+    }
+  },
+  "synthetic_selector_audit": {
+    "iteration_selector": {
+      "contract": "argmax(validation trajectory); test trajectory is report-only",
+      "assertions": [
+        {
+          "name": "test_score_mutation_does_not_change_iteration",
+          "expected": "same selected iteration",
+          "observed": "test before=[0.99, 0.1, 0.6], test after=[0.01, 0.1, 0.99], selected=1/1",
+          "passed": true,
+          "expected_to_pass": true,
+          "expectation_met": true,
+          "assertion_message": null
+        },
+        {
+          "name": "validation_score_mutation_can_change_iteration",
+          "expected": "different selected iteration",
+          "observed": "validation before=[0.2, 0.8, 0.5], validation after=[0.9, 0.2, 0.1], selected=1/0",
+          "passed": true,
+          "expected_to_pass": true,
+          "expectation_met": true,
+          "assertion_message": null
+        }
+      ],
+      "all_assertions_passed": true
+    }
+  },
+  "saved_results_audit": {
+    "path": "results/phase1/all_results.csv",
+    "sha256": "a017029dc8f464f372e440729eef7a24efbf72998c5082e2ab712d9b87be052e",
+    "rows_checked": 144,
+    "iteration_selector_matches_validation_argmax": true,
+    "iteration_selector_mismatches": [],
+    "reported_test_score_matches_selected_iteration": true,
+    "reported_score_mismatches": [],
+    "report_level_tau_selection": {
+      "status": "test-score-derived selection; not an independent model-selection estimate",
+      "selected_tau_by_ratio_recomputed": {
+        "0.05": {
+          "tau": 0.9,
+          "mean_test_derived_best_st_f1": 0.6641166666666667,
+          "selection_input": "best_st_f1 (test score at validation-selected iteration)"
+        },
+        "0.1": {
+          "tau": 0.7,
+          "mean_test_derived_best_st_f1": 0.7391916666666667,
+          "selection_input": "best_st_f1 (test score at validation-selected iteration)"
+        },
+        "0.2": {
+          "tau": 0.7,
+          "mean_test_derived_best_st_f1": 0.7976666666666667,
+          "selection_input": "best_st_f1 (test score at validation-selected iteration)"
+        },
+        "0.5": {
+          "tau": 0.8,
+          "mean_test_derived_best_st_f1": 0.8363166666666667,
+          "selection_input": "best_st_f1 (test score at validation-selected iteration)"
+        }
+      }
+    }
+  },
+  "notebook_audit": {
+    "path": "notebooks/04_phase1.ipynb",
+    "sha256": "953a9f26448fd40c03cfb7760b1314ea1b7e7ab9cadcae6f919da3485979b16f",
+    "same_known_target_signatures": {
+      "global_label_accessor_present": true,
+      "pseudo_labels_computed": true,
+      "accepted_indices_appended_without_target_mapping": true
+    }
+  },
+  "next_full_rerun_contract": [
+    "Carry explicit targets beside indices for every labeled and pseudo-labeled example.",
+    "Never expose hidden unlabeled labels to target construction, split stratification, or early stopping.",
+    "Use hidden labels only in a separately permissioned retrospective diagnostic after predictions are frozen.",
+    "Choose iterations and tau on source validation only; evaluate the test set once.",
+    "Save the selected checkpoint and prediction manifest used by every reported metric."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-01",
+  "passed": true,
+  "archive_sha256": "88f2570bfe23137eafc74040a3681312865898f4c74d2ea8957da59951f1636e",
+  "archive_files": 253,
+  "extracted_release_manifest_sha256": "d5e7eadbdb085c8f8f2a0a48751aa6bd94b4d0dc021001f3dc8894dcb1b83a7d",
+  "python": "3.14.5",
+  "system": "Darwin",
+  "machine": "arm64",
+  "packages": {
+    "kiwisolver": "1.5.1",
+    "fonttools": "4.66.1",
+    "packaging": "26.3",
+    "matplotlib": "3.11.0",
+    "numpy": "2.4.6",
+    "contourpy": "1.4.0",
+    "python-dateutil": "2.9.0.post0",
+    "cycler": "0.12.1",
+    "pandas": "3.0.6",
+    "pillow": "12.3.0",
+    "pyparsing": "3.3.3",
+    "six": "1.17.0"
+  },
+  "system_site_packages": false,
+  "torch_installed": false,
+  "statistics": {
+    "schema_version": 1,
+    "mode": "saved_predictions_only",
+    "passed": true,
+    "checkpoint_inference_performed": false,
+    "training_performed": false,
+    "prediction_files_checked": 100,
+    "model_prediction_vectors_checked": 244,
+    "tables_checked": 10,
+    "absolute_metric_tolerance": 1e-12,
+    "draws": 1000,
+    "seed": 20260928,
+    "environment": {
+      "python": "3.14.5",
+      "numpy": "2.4.6",
+      "pandas": "3.0.6"
+    },
+    "release_manifest_sha256": "d5e7eadbdb085c8f8f2a0a48751aa6bd94b4d0dc021001f3dc8894dcb1b83a7d",
+    "output_sha256": {
+      "mert_svm/canonical_results.csv": "2757ce8b190bf3ecd8b95a0bce9a85cf483b30d4572e2a6b7d50458e9e69b71a",
+      "mert_svm/canonical_summary.csv": "e3481d940243f36c66f191fd7601a2d8dd283c96b2b0f5250467d4326a563998",
+      "cnn/canonical_results.csv": "077d9a25df69bb9d859794e68ffa62cdaca26f0636b93a6620d3abd0e7c50dfa",
+      "self_training/canonical_results.csv": "5368e252a681f4f6b6eac7984f5fb85137f2b2f67ffad34fa22846e474120976",
+      "self_training/canonical_summary.csv": "ed7816a22bf76cd7e4695fdb9277d3502dddd9d673f2c7c04289d293b88d4533",
+      "self_training/per_class_f1.csv": "aecbfffc9489adcf572a2234d39d4794b596abf1501bbb09187b1f973eea23d8",
+      "self_training/confusion_counts.csv": "6e225599b37232c27a59e6867a2a67619bda204c1be608bb2f21e0a5962004c4",
+      "verification/per_class_f1.csv": "b840edc00e9dfb18c01a77d1d8186c2dfe0c94b9039f4c0d412fb72e2cc6cd08",
+      "verification/confusion_counts.csv": "1057e62e6a057e9c5dea81cf93f5935091ca32e1f466dacd6876b14c6adc017c",
+      "verification/bootstrap_sensitivity.csv": "62b360232f12af248ddf79f60bd5d46f931c87d983cea7cde71619df78f628bc"
+    }
+  },
+  "figures": {
+    "source_script_sha256": "94de669230414f4cec2657c1e2ef9e6e947dfe900a36a63bc938cfe44ceea81e",
+    "inputs": {
+      "mert_svm/canonical_summary.csv": "e3481d940243f36c66f191fd7601a2d8dd283c96b2b0f5250467d4326a563998",
+      "self_training/canonical_summary.csv": "ed7816a22bf76cd7e4695fdb9277d3502dddd9d673f2c7c04289d293b88d4533",
+      "verification/bootstrap_sensitivity.csv": "62b360232f12af248ddf79f60bd5d46f931c87d983cea7cde71619df78f628bc",
+      "verification/confusion_counts.csv": "1057e62e6a057e9c5dea81cf93f5935091ca32e1f466dacd6876b14c6adc017c",
+      "self_training/confusion_counts.csv": "6e225599b37232c27a59e6867a2a67619bda204c1be608bb2f21e0a5962004c4"
+    },
+    "outputs": {
+      "figure1_budget_curves.pdf": "52cd68d62cd1f4d8ba7fac9491a7032d6eac4bbc676b95b053a8249c035a272a",
+      "figure1_budget_curves.png": "c5abd58f3c945b048ab49194a594cb9165bf72ba438e05894f5f2baffb5879b4",
+      "figure2_resampling_units.pdf": "65b680b2e4a75e2c867b591483b1adb385b63d663daedb5687def4f479e16d1b",
+      "figure2_resampling_units.png": "ba5c230dcee89e87ccec6d386d71cb28d47b4d6f785bb00cb2f3a4a152b9cf54",
+      "figure3_confusions.pdf": "0462f6e94d38600ccfb3d643e5954f9285eff244090970b402f8aff965a6e7cb",
+      "figure3_confusions.png": "46786d6354689f8f5dd719029aa0f494c00966f90cf6f307cab26c04c113ce0e"
+    },
+    "dpi": 300,
+    "point_estimate": "Mean trials within type, then mean four instrument types",
+    "intervals": "1000 paired percentile draws conditional on fixed predictions; no population inference",
+    "confusions": "Row-normalized pooled counts, three repeated predictions per clip"
+  },
+  "figure_count": 3,
+  "scope": "extracted ZIP; independent venv; saved predictions and explicit target traces only; no checkpoint inference or retraining",
+  "published": false
+}

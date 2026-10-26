@@ -20,6 +20,7 @@ __pycache__/
 # 대용량 데이터: 임베딩 캐시(재생성 가능) + 원본 오디오/zip (별도 배포)
 # GitHub 100MB 제한 초과분 포함. 코드·분할설정·특징행렬(csv)·결과는 계속 추적함.
 data/*.npy
+results/**/cache/
 data/erhu/
 data/philharmonia/
 *.zip

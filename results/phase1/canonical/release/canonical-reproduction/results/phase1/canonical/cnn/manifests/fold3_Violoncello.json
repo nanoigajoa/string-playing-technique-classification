@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-21T07:38:20.603181+00:00",
+  "fold_key": "fold3_Violoncello",
+  "fold": 3,
+  "held_out_instrument": "Violoncello",
+  "seed": 520003,
+  "training_spec": {
+    "epochs": 30,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": "CosineAnnealingLR(T_max=epochs)",
+    "augmentation": "one random frequency mask and one random time mask per training access"
+  },
+  "selection_rule": "preregistered final epoch; no validation or test selection",
+  "n_train": 2645,
+  "n_test": 757,
+  "train_index_hash": "8450e30493a6153059863352c07a4f500cb36cbb1591cf889ee5f6b3d361bf6f",
+  "test_index_hash": "edc3baf868bd34d0ea7fbe90db1a89b0ad54453e5089ec3c6c8f54b1b3f0aa4a",
+  "partitions_disjoint": true,
+  "class_weight_source": "labels[train_idx] only",
+  "train_class_counts": [
+    902,
+    510,
+    822,
+    229,
+    182
+  ],
+  "class_weights": [
+    0.5864745011086474,
+    1.0372549019607844,
+    0.6435523114355232,
+    2.3100436681222707,
+    2.9065934065934065
+  ],
+  "class_weight_hash": "7bde7bbcc36b53fcb8ce474451cf6c0c4db055d35a590567b1b552cb6fddc6f1",
+  "epoch_train_losses": [
+    1.0206930529640381,
+    0.6407443931303829,
+    0.560244694531682,
+    0.49767498636102103,
+    0.4836736720010459,
+    0.39200686798038253,
+    0.35711355291935337,
+    0.36608306560889786,
+    0.33459081168634347,
+    0.2865762807518603,
+    0.2785724240792803,
+    0.25546477950481045,
+    0.3012774602835437,
+    0.23736018301492715,
+    0.24667197438966798,
+    0.23634643112140966,
+    0.22044234296464058,
+    0.20370471630110798,
+    0.18218092842543698,
+    0.17985461546803813,
+    0.15415844428970152,
+    0.16400006673781267,
+    0.17174925138971892,
+    0.1351558132972344,
+    0.13744820268398308,
+    0.12498620161450053,
+    0.1249080823667078,
+    0.13637693340789123,
+    0.14003007203699594,
+    0.13340538553893566
+  ],
+  "metrics": {
+    "macro_f1": 0.9271551364988533,
+    "per_class_f1": [
+      0.9773913043478261,
+      0.9343629343629344,
+      1.0,
+      0.9150326797385621,
+      0.8089887640449438
+    ],
+    "confusion_matrix": [
+      [
+        281,
+        0,
+        0,
+        10,
+        0
+      ],
+      [
+        0,
+        121,
+        0,
+        0,
+        8
+      ],
+      [
+        0,
+        0,
+        219,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        70,
+        0
+      ],
+      [
+        0,
+        9,
+        0,
+        0,
+        36
+      ]
+    ]
+  },
+  "artifacts": {
+    "checkpoint": "models/phase1/canonical/cnn/fold3_Violoncello/final_epoch.pt",
+    "checkpoint_sha256": "08fae7bc54c9cd3cdedc72b38655fb7309c41c29475821dbd77ccd01215d1793",
+    "predictions": "results/phase1/canonical/cnn/predictions/fold3_Violoncello.npz",
+    "predictions_sha256": "741c3169b08e038fc68fae4e266ab04479c7314f8bfdfb59e2db0e1d05ad70c9"
+  },
+  "prediction_content_hash": "c75d976ff425d689a017ce1b5f78f4bd68eb2d40445fcb4e4334d83830bbcb37",
+  "test_prediction_calls": 1
+}

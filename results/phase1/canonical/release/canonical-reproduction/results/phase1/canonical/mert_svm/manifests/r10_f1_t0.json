@@ -1,0 +1,621 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-20T13:52:44.388621+00:00",
+  "split_key": "r10_f1_t0",
+  "fold": 1,
+  "held_out_instrument": "Violin",
+  "seed_ratio": 0.1,
+  "trial": 0,
+  "split_seed": 430100,
+  "training_spec": {
+    "epochs": 200,
+    "patience": 20
+  },
+  "selection_rule": "maximum val_select macro F1; fixed grid order breaks ties",
+  "test_role": "selected persisted checkpoints evaluated once after all selection",
+  "partition_sizes": {
+    "train": 161,
+    "early_stop": 41,
+    "val_select": 50,
+    "test": 879
+  },
+  "partition_hashes": {
+    "train": "902b2589c1d2786cb8b1f51b33bf4d36eac806b7cddbad5d1b1a79473deae192",
+    "early_stop": "fab3757b6db83118dabdffff7f7bec2d5e720b5e62c04419964a318303458b87",
+    "val_select": "0eefca636c64dd3c189df01ff5f20bf9a58590b523ba25fb2b8e8b3605eaf3da",
+    "test": "01a28d8306afb761fac61dcd401b5f14e8bc2508bb1b29847bf04592c75c3367"
+  },
+  "partitions_pairwise_disjoint": true,
+  "class_weight_source": "labels[train_idx] only",
+  "train_class_counts": [
+    58,
+    29,
+    49,
+    15,
+    10
+  ],
+  "mert_class_weights": [
+    0.5551724137931034,
+    1.110344827586207,
+    0.6571428571428571,
+    2.1466666666666665,
+    3.22
+  ],
+  "mert_class_weight_hash": "3a117492615806ab2fc09586b6795540a7c87101f8ebd153778947f59e49c25e",
+  "mert_grid": {
+    "arch": [
+      "linear",
+      "mlp256"
+    ],
+    "lr": [
+      0.0003,
+      0.001,
+      0.003
+    ],
+    "wd": [
+      0.0001,
+      0.001
+    ],
+    "dropout": [
+      0.1,
+      0.3
+    ]
+  },
+  "svm_grid": {
+    "C": [
+      0.1,
+      1,
+      10,
+      100
+    ],
+    "gamma": [
+      "scale",
+      0.01,
+      0.001
+    ]
+  },
+  "mert_search": [
+    {
+      "config_id": 0,
+      "config": {
+        "arch": "linear",
+        "lr": 0.0003,
+        "wd": 0.0001,
+        "dropout": 0.1
+      },
+      "seed": 430100,
+      "early_stop_f1": 0.9126436781609195,
+      "best_epoch_zero_based": 57,
+      "val_select_f1": 0.8303599379162527
+    },
+    {
+      "config_id": 1,
+      "config": {
+        "arch": "linear",
+        "lr": 0.0003,
+        "wd": 0.0001,
+        "dropout": 0.3
+      },
+      "seed": 430101,
+      "early_stop_f1": 0.9708812260536398,
+      "best_epoch_zero_based": 95,
+      "val_select_f1": 0.8557575757575758
+    },
+    {
+      "config_id": 2,
+      "config": {
+        "arch": "linear",
+        "lr": 0.0003,
+        "wd": 0.001,
+        "dropout": 0.1
+      },
+      "seed": 430102,
+      "early_stop_f1": 0.9457142857142857,
+      "best_epoch_zero_based": 50,
+      "val_select_f1": 0.8469351963659364
+    },
+    {
+      "config_id": 3,
+      "config": {
+        "arch": "linear",
+        "lr": 0.0003,
+        "wd": 0.001,
+        "dropout": 0.3
+      },
+      "seed": 430103,
+      "early_stop_f1": 0.8927106227106227,
+      "best_epoch_zero_based": 89,
+      "val_select_f1": 0.9035497835497835
+    },
+    {
+      "config_id": 4,
+      "config": {
+        "arch": "linear",
+        "lr": 0.001,
+        "wd": 0.0001,
+        "dropout": 0.1
+      },
+      "seed": 430104,
+      "early_stop_f1": 0.9708812260536398,
+      "best_epoch_zero_based": 30,
+      "val_select_f1": 0.8052312599681022
+    },
+    {
+      "config_id": 5,
+      "config": {
+        "arch": "linear",
+        "lr": 0.001,
+        "wd": 0.0001,
+        "dropout": 0.3
+      },
+      "seed": 430105,
+      "early_stop_f1": 0.9708812260536398,
+      "best_epoch_zero_based": 44,
+      "val_select_f1": 0.8733333333333334
+    },
+    {
+      "config_id": 6,
+      "config": {
+        "arch": "linear",
+        "lr": 0.001,
+        "wd": 0.001,
+        "dropout": 0.1
+      },
+      "seed": 430106,
+      "early_stop_f1": 0.9269251820975958,
+      "best_epoch_zero_based": 21,
+      "val_select_f1": 0.8380952380952381
+    },
+    {
+      "config_id": 7,
+      "config": {
+        "arch": "linear",
+        "lr": 0.001,
+        "wd": 0.001,
+        "dropout": 0.3
+      },
+      "seed": 430107,
+      "early_stop_f1": 0.9708812260536398,
+      "best_epoch_zero_based": 28,
+      "val_select_f1": 0.8377177177177177
+    },
+    {
+      "config_id": 8,
+      "config": {
+        "arch": "linear",
+        "lr": 0.003,
+        "wd": 0.0001,
+        "dropout": 0.1
+      },
+      "seed": 430108,
+      "early_stop_f1": 0.9708812260536398,
+      "best_epoch_zero_based": 7,
+      "val_select_f1": 0.860810291858679
+    },
+    {
+      "config_id": 9,
+      "config": {
+        "arch": "linear",
+        "lr": 0.003,
+        "wd": 0.0001,
+        "dropout": 0.3
+      },
+      "seed": 430109,
+      "early_stop_f1": 0.9708812260536398,
+      "best_epoch_zero_based": 7,
+      "val_select_f1": 0.8424466571834992
+    },
+    {
+      "config_id": 10,
+      "config": {
+        "arch": "linear",
+        "lr": 0.003,
+        "wd": 0.001,
+        "dropout": 0.1
+      },
+      "seed": 430110,
+      "early_stop_f1": 0.9708812260536398,
+      "best_epoch_zero_based": 10,
+      "val_select_f1": 0.858095238095238
+    },
+    {
+      "config_id": 11,
+      "config": {
+        "arch": "linear",
+        "lr": 0.003,
+        "wd": 0.001,
+        "dropout": 0.3
+      },
+      "seed": 430111,
+      "early_stop_f1": 0.9708812260536398,
+      "best_epoch_zero_based": 14,
+      "val_select_f1": 0.8733333333333334
+    },
+    {
+      "config_id": 12,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.0003,
+        "wd": 0.0001,
+        "dropout": 0.1
+      },
+      "seed": 430112,
+      "early_stop_f1": 0.9708812260536398,
+      "best_epoch_zero_based": 12,
+      "val_select_f1": 0.8739181286549706
+    },
+    {
+      "config_id": 13,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.0003,
+        "wd": 0.0001,
+        "dropout": 0.3
+      },
+      "seed": 430113,
+      "early_stop_f1": 0.9457142857142857,
+      "best_epoch_zero_based": 12,
+      "val_select_f1": 0.735448343079922
+    },
+    {
+      "config_id": 14,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.0003,
+        "wd": 0.001,
+        "dropout": 0.1
+      },
+      "seed": 430114,
+      "early_stop_f1": 0.9708812260536398,
+      "best_epoch_zero_based": 22,
+      "val_select_f1": 0.8733333333333334
+    },
+    {
+      "config_id": 15,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.0003,
+        "wd": 0.001,
+        "dropout": 0.3
+      },
+      "seed": 430115,
+      "early_stop_f1": 0.9457142857142857,
+      "best_epoch_zero_based": 30,
+      "val_select_f1": 0.9035497835497835
+    },
+    {
+      "config_id": 16,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.001,
+        "wd": 0.0001,
+        "dropout": 0.1
+      },
+      "seed": 430116,
+      "early_stop_f1": 0.9366666666666668,
+      "best_epoch_zero_based": 13,
+      "val_select_f1": 0.8733333333333334
+    },
+    {
+      "config_id": 17,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.001,
+        "wd": 0.0001,
+        "dropout": 0.3
+      },
+      "seed": 430117,
+      "early_stop_f1": 0.9366666666666668,
+      "best_epoch_zero_based": 10,
+      "val_select_f1": 0.8228070175438598
+    },
+    {
+      "config_id": 18,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.001,
+        "wd": 0.001,
+        "dropout": 0.1
+      },
+      "seed": 430118,
+      "early_stop_f1": 0.9457142857142857,
+      "best_epoch_zero_based": 3,
+      "val_select_f1": 0.7591253101736972
+    },
+    {
+      "config_id": 19,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.001,
+        "wd": 0.001,
+        "dropout": 0.3
+      },
+      "seed": 430119,
+      "early_stop_f1": 0.9366666666666668,
+      "best_epoch_zero_based": 6,
+      "val_select_f1": 0.9035497835497835
+    },
+    {
+      "config_id": 20,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.003,
+        "wd": 0.0001,
+        "dropout": 0.1
+      },
+      "seed": 430120,
+      "early_stop_f1": 0.9708812260536398,
+      "best_epoch_zero_based": 7,
+      "val_select_f1": 0.9035497835497835
+    },
+    {
+      "config_id": 21,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.003,
+        "wd": 0.0001,
+        "dropout": 0.3
+      },
+      "seed": 430121,
+      "early_stop_f1": 0.9457142857142857,
+      "best_epoch_zero_based": 12,
+      "val_select_f1": 0.8965786901270771
+    },
+    {
+      "config_id": 22,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.003,
+        "wd": 0.001,
+        "dropout": 0.1
+      },
+      "seed": 430122,
+      "early_stop_f1": 0.9490598290598291,
+      "best_epoch_zero_based": 20,
+      "val_select_f1": 0.8860764212488352
+    },
+    {
+      "config_id": 23,
+      "config": {
+        "arch": "mlp256",
+        "lr": 0.003,
+        "wd": 0.001,
+        "dropout": 0.3
+      },
+      "seed": 430123,
+      "early_stop_f1": 0.9490598290598291,
+      "best_epoch_zero_based": 11,
+      "val_select_f1": 0.8733333333333334
+    }
+  ],
+  "svm_search": [
+    {
+      "config_id": 0,
+      "config": {
+        "C": 0.1,
+        "gamma": "scale"
+      },
+      "val_select_f1": 0.4219047619047619
+    },
+    {
+      "config_id": 1,
+      "config": {
+        "C": 0.1,
+        "gamma": 0.01
+      },
+      "val_select_f1": 0.06761904761904762
+    },
+    {
+      "config_id": 2,
+      "config": {
+        "C": 0.1,
+        "gamma": 0.001
+      },
+      "val_select_f1": 0.179874213836478
+    },
+    {
+      "config_id": 3,
+      "config": {
+        "C": 1,
+        "gamma": "scale"
+      },
+      "val_select_f1": 0.9420332355816228
+    },
+    {
+      "config_id": 4,
+      "config": {
+        "C": 1,
+        "gamma": 0.01
+      },
+      "val_select_f1": 0.8247850395218815
+    },
+    {
+      "config_id": 5,
+      "config": {
+        "C": 1,
+        "gamma": 0.001
+      },
+      "val_select_f1": 0.9010752688172043
+    },
+    {
+      "config_id": 6,
+      "config": {
+        "C": 10,
+        "gamma": "scale"
+      },
+      "val_select_f1": 0.9761038961038961
+    },
+    {
+      "config_id": 7,
+      "config": {
+        "C": 10,
+        "gamma": 0.01
+      },
+      "val_select_f1": 0.8247850395218815
+    },
+    {
+      "config_id": 8,
+      "config": {
+        "C": 10,
+        "gamma": 0.001
+      },
+      "val_select_f1": 0.9761038961038961
+    },
+    {
+      "config_id": 9,
+      "config": {
+        "C": 100,
+        "gamma": "scale"
+      },
+      "val_select_f1": 0.9761038961038961
+    },
+    {
+      "config_id": 10,
+      "config": {
+        "C": 100,
+        "gamma": 0.01
+      },
+      "val_select_f1": 0.8247850395218815
+    },
+    {
+      "config_id": 11,
+      "config": {
+        "C": 100,
+        "gamma": 0.001
+      },
+      "val_select_f1": 0.9761038961038961
+    }
+  ],
+  "selected_mert": {
+    "config_id": 3,
+    "config": {
+      "arch": "linear",
+      "lr": 0.0003,
+      "wd": 0.001,
+      "dropout": 0.3
+    },
+    "seed": 430103,
+    "early_stop_f1": 0.8927106227106227,
+    "best_epoch_zero_based": 89,
+    "val_select_f1": 0.9035497835497835
+  },
+  "selected_svm": {
+    "config_id": 6,
+    "config": {
+      "C": 10,
+      "gamma": "scale"
+    },
+    "val_select_f1": 0.9761038961038961
+  },
+  "svm_fitted_class_weights": [
+    0.5551724137931034,
+    1.110344827586207,
+    0.6571428571428571,
+    2.1466666666666665,
+    3.22
+  ],
+  "mert_metrics": {
+    "macro_f1": 0.7964219522116224,
+    "per_class_f1": [
+      0.8156424581005587,
+      0.9192200557103064,
+      0.9657657657657658,
+      0.48148148148148145,
+      0.8
+    ],
+    "confusion_matrix": [
+      [
+        219,
+        0,
+        1,
+        64,
+        0
+      ],
+      [
+        0,
+        165,
+        0,
+        0,
+        24
+      ],
+      [
+        16,
+        0,
+        268,
+        1,
+        0
+      ],
+      [
+        18,
+        0,
+        1,
+        39,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        0,
+        58
+      ]
+    ]
+  },
+  "svm_metrics": {
+    "macro_f1": 0.6891849093917025,
+    "per_class_f1": [
+      0.8096,
+      0.8552036199095022,
+      0.8254620123203286,
+      0.6356589147286822,
+      0.32
+    ],
+    "confusion_matrix": [
+      [
+        253,
+        0,
+        1,
+        30,
+        0
+      ],
+      [
+        0,
+        189,
+        0,
+        0,
+        0
+      ],
+      [
+        71,
+        13,
+        201,
+        0,
+        0
+      ],
+      [
+        17,
+        0,
+        0,
+        41,
+        0
+      ],
+      [
+        0,
+        51,
+        0,
+        0,
+        12
+      ]
+    ]
+  },
+  "artifacts": {
+    "mert_checkpoint": "models/phase1/canonical/mert_svm/r10_f1_t0/mert_head.pt",
+    "mert_checkpoint_sha256": "4bb87f0331a62c15e0bff17876f752a2eb4c239d8be521cf7e80e31979a0e4da",
+    "svm_checkpoint": "models/phase1/canonical/mert_svm/r10_f1_t0/svm.joblib",
+    "svm_checkpoint_sha256": "b0bbd3dfd66db8781a9106e046a7032d1b27d9b80d5a4d5ed5f4f1b2cac97833",
+    "predictions": "results/phase1/canonical/mert_svm/predictions/r10_f1_t0.npz",
+    "predictions_sha256": "eaf2160b29baa7e07651b3a65d32fc47a08eacfdfe2eaf37ba360ddaec49fd6b"
+  },
+  "prediction_content_hash": "64d2ddf4afae63e87d5e7850277d071255f506ba460a9df034a75e5dbb525a04",
+  "test_prediction_calls_per_model": 1
+}

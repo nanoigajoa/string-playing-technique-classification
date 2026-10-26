@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "verified_manifests": 48,
+  "verified_checkpoint_replays": 144,
+  "prediction_set_sha256": "268c7a7f1b4af7d8dbc026e615c6e1cfb7d24a3b1751ccac0d6d5ff62a3dc3dc",
+  "training_code_sha256": "61a63f3e987c6a33e041bdd1998fe56ded108c1f9c118855fd7938179233d724",
+  "repaired_core_sha256": "1087e46fc96cf6a4a9a7ce284a336ddf4d436b6244047a9d5247a622f64d0e1b",
+  "input_sha256": {
+    "data/mert_embeddings.npy": "cd5da8ee6153b81fdf080ede8c4b4f453540829e8daa9383887104a930311032",
+    "data/mert_labels.npy": "e3f6a6e3fb3b72ea1d6a2464247fb0f1150ccd9259418ea3a37151409c3c1082",
+    "data/split_configs.json": "944f841cab76cb5476143f93b5dcdcb5122726266603bca62f00bd0d23293433"
+  },
+  "selection": "fixed tau=0.8; iteration selected by observed-label validation only",
+  "oracle_scope": "explicit privileged diagnostic; not an attainable unsupervised result or guaranteed upper bound",
+  "inference_scope": "four held-out instrument types only"
+}

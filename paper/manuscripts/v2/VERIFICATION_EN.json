@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "mode": "complete_english_translation_parity_and_exports",
+  "review_date": "2026-10-08",
+  "pdf_pages": 19,
+  "whitespace_words_including_metadata_and_references": 7381,
+  "parallel_markdown_blocks": 141,
+  "numeric_table_parity": 7,
+  "blockwise_decimal_token_parity": true,
+  "unchanged_equations": 2,
+  "headings": 30,
+  "references": 11,
+  "english_figures": 6,
+  "identical_detail_csvs": 9,
+  "docx_zip_and_structure": "passed",
+  "export_content_markers": 6,
+  "korean_artifacts_unchanged": true,
+  "new_model_training": false,
+  "manual_layout_review": "see REVIEW_EN.md"
+}

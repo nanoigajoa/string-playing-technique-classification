@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-21T07:38:20.615780+00:00",
+  "metadata_sha256": "5dc2a867759c39ce1b2f870093ab0c9a3d5c82e6e10a72cc51afe0d223f6825f",
+  "mel_cache_sha256": "263a7be4466e532301be5257a9d4182a8b2f8e002cd3a662c7fd98e3574fe16d",
+  "code": {
+    "path": "src/phase1_canonical_cnn.py",
+    "sha256": "e24ef76956c34d5c4609030c6efdf2d267deaf6a0dec1c5c70a24c2dff8030ee"
+  },
+  "n_manifests": 4,
+  "macro_f1_fold_mean": 0.8728739926826041,
+  "macro_f1_fold_sd": 0.051888589504247386,
+  "all_partitions_disjoint": true,
+  "all_test_prediction_calls_equal_one": true,
+  "prediction_content_hashes": {
+    "fold0_Viola": "ff7c49bcccd4dbb67f784c53a51da2f3d0100f01c3299c4ce8ad9aadadbabb0d",
+    "fold1_Violin": "109645b9fa2789fa2ddc0df1491e0605af2bdbd305b57ff19eb989847b5b5c7c",
+    "fold2_Contrabass": "983b02e1f7427497bf4b116d7a3d7b0c43059e1cd9c9a98f07c97e97a77525fe",
+    "fold3_Violoncello": "c75d976ff425d689a017ce1b5f78f4bd68eb2d40445fcb4e4334d83830bbcb37"
+  }
+}

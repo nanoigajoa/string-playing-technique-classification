@@ -1,0 +1,632 @@
+{
+  "created_at_utc": "2026-09-20T13:47:47.637770+00:00",
+  "protocol": "outer instrument-type LOSO; every learned transform fit on train_idx only",
+  "seed": 42,
+  "inputs": {
+    "data/mert_meta.csv": "5dc2a867759c39ce1b2f870093ab0c9a3d5c82e6e10a72cc51afe0d223f6825f",
+    "data/features_full.csv": "e82089f3ca03f603aedcfa1bd8bc0e24170721348d94bb32c45bbbbea953db52",
+    "data/clip_durations.csv": "8770fa0f0d411a1054c299d09534f35a4b2d1eaa053a25004c13ec540d13ad45"
+  },
+  "n_samples": 3402,
+  "groups": [
+    "Contrabass",
+    "Viola",
+    "Violin",
+    "Violoncello"
+  ],
+  "n_features": 245,
+  "n_onset_features": 5,
+  "metrics": {
+    "f1_duration_only": 0.40038085432946263,
+    "f1_full_245": 0.9064538562306481,
+    "f1_majority": 0.10385201305767137,
+    "f1_full_residualized": 0.8890579457374674,
+    "f1_onset_only": 0.6733017078945083,
+    "f1_onset_residualized": 0.693578089345022
+  },
+  "prediction_file": "results/phase1/audit_repair/duration_baseline_repaired_predictions.npz",
+  "prediction_sha256": "2211515bc1a3ff8c45e20f63f6467684408dcc886105123e5f2de78b6a8f0bb8",
+  "fold_fits": [
+    {
+      "condition": "majority",
+      "fold": 0,
+      "held_out_group": "['Viola']",
+      "train_class_counts": [
+        884,
+        483,
+        732,
+        207,
+        163
+      ],
+      "majority_class": 0,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "majority",
+      "fold": 1,
+      "held_out_group": "['Violin']",
+      "train_class_counts": [
+        909,
+        450,
+        756,
+        244,
+        164
+      ],
+      "majority_class": 0,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "majority",
+      "fold": 2,
+      "held_out_group": "['Contrabass']",
+      "train_class_counts": [
+        884,
+        474,
+        813,
+        226,
+        172
+      ],
+      "majority_class": 0,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "majority",
+      "fold": 3,
+      "held_out_group": "['Violoncello']",
+      "train_class_counts": [
+        902,
+        510,
+        822,
+        229,
+        182
+      ],
+      "majority_class": 0,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "duration_only",
+      "fold": 0,
+      "held_out_group": "['Viola']",
+      "n_train": 2469,
+      "n_test": 933,
+      "train_index_hash": "0eaf6083f3c6817baef8db318149d653766c2999a74d7d8a64e448b2a5708f82",
+      "test_index_hash": "67d9fb4f64ee5113ca7ed7bf5fb9d126a4f57d9c9a9f096ca939e3385bfcdb50",
+      "train_class_counts": [
+        884,
+        483,
+        732,
+        207,
+        163
+      ],
+      "svc_class_weight": [
+        0.5585972850678733,
+        1.022360248447205,
+        0.6745901639344263,
+        2.3855072463768114,
+        3.029447852760736
+      ],
+      "svc_class_weight_hash": "f74d9b0b083c154dcaebea7bd806ac78c4e6cc130f78ec4468ec9807bca2b019",
+      "scaler_hash": "df25a01b507fa241c7daeb547f45f81214d024ce8148689fe0b5b56b7f70c89e",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "duration_only",
+      "fold": 1,
+      "held_out_group": "['Violin']",
+      "n_train": 2523,
+      "n_test": 879,
+      "train_index_hash": "abdf47ee5114a0044a55b9e52bd75188755dce8a2c05c2e122e199c91147c2e8",
+      "test_index_hash": "01a28d8306afb761fac61dcd401b5f14e8bc2508bb1b29847bf04592c75c3367",
+      "train_class_counts": [
+        909,
+        450,
+        756,
+        244,
+        164
+      ],
+      "svc_class_weight": [
+        0.5551155115511551,
+        1.1213333333333333,
+        0.6674603174603174,
+        2.068032786885246,
+        3.0768292682926828
+      ],
+      "svc_class_weight_hash": "36f794416e2cd5812ef54133aafdc22f1017fa8876bf5c050123b2de5337f90f",
+      "scaler_hash": "43fed4a4f0d1fc620512034f3dc600826b0cddcf204c41636a504966f2578aef",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "duration_only",
+      "fold": 2,
+      "held_out_group": "['Contrabass']",
+      "n_train": 2569,
+      "n_test": 833,
+      "train_index_hash": "0833c29d43cec03620a230509ec037c083d117d6828c8011589767804f04bae4",
+      "test_index_hash": "d5509afa1521d8baa19d64aa4eaa6fc7d7ac3920599294c76eed59642f3b5002",
+      "train_class_counts": [
+        884,
+        474,
+        813,
+        226,
+        172
+      ],
+      "svc_class_weight": [
+        0.5812217194570136,
+        1.0839662447257383,
+        0.631980319803198,
+        2.2734513274336283,
+        2.9872093023255815
+      ],
+      "svc_class_weight_hash": "391e5f0f9b14b92be36c0c7d31a8fa99634056016b2abef076342f8a12959d9a",
+      "scaler_hash": "4c5dc140b88003f11372e28c1c9797c72e1b53f9e03ed0cfc408ea7626f6515c",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "duration_only",
+      "fold": 3,
+      "held_out_group": "['Violoncello']",
+      "n_train": 2645,
+      "n_test": 757,
+      "train_index_hash": "8450e30493a6153059863352c07a4f500cb36cbb1591cf889ee5f6b3d361bf6f",
+      "test_index_hash": "edc3baf868bd34d0ea7fbe90db1a89b0ad54453e5089ec3c6c8f54b1b3f0aa4a",
+      "train_class_counts": [
+        902,
+        510,
+        822,
+        229,
+        182
+      ],
+      "svc_class_weight": [
+        0.5864745011086474,
+        1.0372549019607844,
+        0.6435523114355232,
+        2.3100436681222707,
+        2.9065934065934065
+      ],
+      "svc_class_weight_hash": "7bde7bbcc36b53fcb8ce474451cf6c0c4db055d35a590567b1b552cb6fddc6f1",
+      "scaler_hash": "ccf8e946ed0a25e1fa47d1393add9661ba54972797e437f33ce55d044391d5ed",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "full_245",
+      "fold": 0,
+      "held_out_group": "['Viola']",
+      "n_train": 2469,
+      "n_test": 933,
+      "train_index_hash": "0eaf6083f3c6817baef8db318149d653766c2999a74d7d8a64e448b2a5708f82",
+      "test_index_hash": "67d9fb4f64ee5113ca7ed7bf5fb9d126a4f57d9c9a9f096ca939e3385bfcdb50",
+      "train_class_counts": [
+        884,
+        483,
+        732,
+        207,
+        163
+      ],
+      "svc_class_weight": [
+        0.5585972850678733,
+        1.022360248447205,
+        0.6745901639344263,
+        2.3855072463768114,
+        3.029447852760736
+      ],
+      "svc_class_weight_hash": "f74d9b0b083c154dcaebea7bd806ac78c4e6cc130f78ec4468ec9807bca2b019",
+      "scaler_hash": "728c930d82a0d1d241e15f7bde0aa8f113562edd7972ce40004167c912d6e8d9",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "full_245",
+      "fold": 1,
+      "held_out_group": "['Violin']",
+      "n_train": 2523,
+      "n_test": 879,
+      "train_index_hash": "abdf47ee5114a0044a55b9e52bd75188755dce8a2c05c2e122e199c91147c2e8",
+      "test_index_hash": "01a28d8306afb761fac61dcd401b5f14e8bc2508bb1b29847bf04592c75c3367",
+      "train_class_counts": [
+        909,
+        450,
+        756,
+        244,
+        164
+      ],
+      "svc_class_weight": [
+        0.5551155115511551,
+        1.1213333333333333,
+        0.6674603174603174,
+        2.068032786885246,
+        3.0768292682926828
+      ],
+      "svc_class_weight_hash": "36f794416e2cd5812ef54133aafdc22f1017fa8876bf5c050123b2de5337f90f",
+      "scaler_hash": "b889606c19c51c3e2561cdfd81910ef7e6cc497f064fceccfa5c940d62f3fe4d",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "full_245",
+      "fold": 2,
+      "held_out_group": "['Contrabass']",
+      "n_train": 2569,
+      "n_test": 833,
+      "train_index_hash": "0833c29d43cec03620a230509ec037c083d117d6828c8011589767804f04bae4",
+      "test_index_hash": "d5509afa1521d8baa19d64aa4eaa6fc7d7ac3920599294c76eed59642f3b5002",
+      "train_class_counts": [
+        884,
+        474,
+        813,
+        226,
+        172
+      ],
+      "svc_class_weight": [
+        0.5812217194570136,
+        1.0839662447257383,
+        0.631980319803198,
+        2.2734513274336283,
+        2.9872093023255815
+      ],
+      "svc_class_weight_hash": "391e5f0f9b14b92be36c0c7d31a8fa99634056016b2abef076342f8a12959d9a",
+      "scaler_hash": "b6a015e44702ca932f103e4e742b8321c89e0971097515fc72a6b594618565b6",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "full_245",
+      "fold": 3,
+      "held_out_group": "['Violoncello']",
+      "n_train": 2645,
+      "n_test": 757,
+      "train_index_hash": "8450e30493a6153059863352c07a4f500cb36cbb1591cf889ee5f6b3d361bf6f",
+      "test_index_hash": "edc3baf868bd34d0ea7fbe90db1a89b0ad54453e5089ec3c6c8f54b1b3f0aa4a",
+      "train_class_counts": [
+        902,
+        510,
+        822,
+        229,
+        182
+      ],
+      "svc_class_weight": [
+        0.5864745011086474,
+        1.0372549019607844,
+        0.6435523114355232,
+        2.3100436681222707,
+        2.9065934065934065
+      ],
+      "svc_class_weight_hash": "7bde7bbcc36b53fcb8ce474451cf6c0c4db055d35a590567b1b552cb6fddc6f1",
+      "scaler_hash": "5926c3fea00757c09754bdb78cbd50281270118c2c2041e2b803cfa7ed169981",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "full_245_residualized",
+      "fold": 0,
+      "held_out_group": "['Viola']",
+      "n_train": 2469,
+      "n_test": 933,
+      "train_index_hash": "0eaf6083f3c6817baef8db318149d653766c2999a74d7d8a64e448b2a5708f82",
+      "test_index_hash": "67d9fb4f64ee5113ca7ed7bf5fb9d126a4f57d9c9a9f096ca939e3385bfcdb50",
+      "train_class_counts": [
+        884,
+        483,
+        732,
+        207,
+        163
+      ],
+      "svc_class_weight": [
+        0.5585972850678733,
+        1.022360248447205,
+        0.6745901639344263,
+        2.3855072463768114,
+        3.029447852760736
+      ],
+      "svc_class_weight_hash": "f74d9b0b083c154dcaebea7bd806ac78c4e6cc130f78ec4468ec9807bca2b019",
+      "scaler_hash": "0a68552658d15a62942ea08f6b0e26f4c002dfd0eb7fa485d4c06d6a83c75265",
+      "residualizer_hash": "f6fa2ee326933e1f96dcbf312910d93d7b1bddd3e4612df149a0441c74d16197",
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "full_245_residualized",
+      "fold": 1,
+      "held_out_group": "['Violin']",
+      "n_train": 2523,
+      "n_test": 879,
+      "train_index_hash": "abdf47ee5114a0044a55b9e52bd75188755dce8a2c05c2e122e199c91147c2e8",
+      "test_index_hash": "01a28d8306afb761fac61dcd401b5f14e8bc2508bb1b29847bf04592c75c3367",
+      "train_class_counts": [
+        909,
+        450,
+        756,
+        244,
+        164
+      ],
+      "svc_class_weight": [
+        0.5551155115511551,
+        1.1213333333333333,
+        0.6674603174603174,
+        2.068032786885246,
+        3.0768292682926828
+      ],
+      "svc_class_weight_hash": "36f794416e2cd5812ef54133aafdc22f1017fa8876bf5c050123b2de5337f90f",
+      "scaler_hash": "58bd9bbd3bb25c2fe87ce8e046d6bf6b4487910bb5243bd4c4d01461a34b40d4",
+      "residualizer_hash": "1358e2b7cf0ee0b028f5f8c9563bc21fcd04b3553d2b2b2589d65d1d53862d12",
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "full_245_residualized",
+      "fold": 2,
+      "held_out_group": "['Contrabass']",
+      "n_train": 2569,
+      "n_test": 833,
+      "train_index_hash": "0833c29d43cec03620a230509ec037c083d117d6828c8011589767804f04bae4",
+      "test_index_hash": "d5509afa1521d8baa19d64aa4eaa6fc7d7ac3920599294c76eed59642f3b5002",
+      "train_class_counts": [
+        884,
+        474,
+        813,
+        226,
+        172
+      ],
+      "svc_class_weight": [
+        0.5812217194570136,
+        1.0839662447257383,
+        0.631980319803198,
+        2.2734513274336283,
+        2.9872093023255815
+      ],
+      "svc_class_weight_hash": "391e5f0f9b14b92be36c0c7d31a8fa99634056016b2abef076342f8a12959d9a",
+      "scaler_hash": "0f6b8bd563b4ca092df710393754428251a19c6633e77669f5a5dc83d5ce729e",
+      "residualizer_hash": "17a730a2671622a01d8049a901784a9dd8aa17493a12ed2cccb4a497900eb290",
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "full_245_residualized",
+      "fold": 3,
+      "held_out_group": "['Violoncello']",
+      "n_train": 2645,
+      "n_test": 757,
+      "train_index_hash": "8450e30493a6153059863352c07a4f500cb36cbb1591cf889ee5f6b3d361bf6f",
+      "test_index_hash": "edc3baf868bd34d0ea7fbe90db1a89b0ad54453e5089ec3c6c8f54b1b3f0aa4a",
+      "train_class_counts": [
+        902,
+        510,
+        822,
+        229,
+        182
+      ],
+      "svc_class_weight": [
+        0.5864745011086474,
+        1.0372549019607844,
+        0.6435523114355232,
+        2.3100436681222707,
+        2.9065934065934065
+      ],
+      "svc_class_weight_hash": "7bde7bbcc36b53fcb8ce474451cf6c0c4db055d35a590567b1b552cb6fddc6f1",
+      "scaler_hash": "c3c5d663d2e8a421075766237b750868ab445caaed585b1054ce645ecef08ca2",
+      "residualizer_hash": "2f03e8c8c1f163373b95bd50e802991266a0e8567aa1f1c3fcf6ef7d1715511f",
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "onset_only",
+      "fold": 0,
+      "held_out_group": "['Viola']",
+      "n_train": 2469,
+      "n_test": 933,
+      "train_index_hash": "0eaf6083f3c6817baef8db318149d653766c2999a74d7d8a64e448b2a5708f82",
+      "test_index_hash": "67d9fb4f64ee5113ca7ed7bf5fb9d126a4f57d9c9a9f096ca939e3385bfcdb50",
+      "train_class_counts": [
+        884,
+        483,
+        732,
+        207,
+        163
+      ],
+      "svc_class_weight": [
+        0.5585972850678733,
+        1.022360248447205,
+        0.6745901639344263,
+        2.3855072463768114,
+        3.029447852760736
+      ],
+      "svc_class_weight_hash": "f74d9b0b083c154dcaebea7bd806ac78c4e6cc130f78ec4468ec9807bca2b019",
+      "scaler_hash": "1fd7e94180300f3d8a204615f0fafe059eca04f8b0eaacbaa50a6c3affb19264",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "onset_only",
+      "fold": 1,
+      "held_out_group": "['Violin']",
+      "n_train": 2523,
+      "n_test": 879,
+      "train_index_hash": "abdf47ee5114a0044a55b9e52bd75188755dce8a2c05c2e122e199c91147c2e8",
+      "test_index_hash": "01a28d8306afb761fac61dcd401b5f14e8bc2508bb1b29847bf04592c75c3367",
+      "train_class_counts": [
+        909,
+        450,
+        756,
+        244,
+        164
+      ],
+      "svc_class_weight": [
+        0.5551155115511551,
+        1.1213333333333333,
+        0.6674603174603174,
+        2.068032786885246,
+        3.0768292682926828
+      ],
+      "svc_class_weight_hash": "36f794416e2cd5812ef54133aafdc22f1017fa8876bf5c050123b2de5337f90f",
+      "scaler_hash": "4d44404de00d4ee5485bc330b62c9464753ddea59c9ea7338bb8934fc744a073",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "onset_only",
+      "fold": 2,
+      "held_out_group": "['Contrabass']",
+      "n_train": 2569,
+      "n_test": 833,
+      "train_index_hash": "0833c29d43cec03620a230509ec037c083d117d6828c8011589767804f04bae4",
+      "test_index_hash": "d5509afa1521d8baa19d64aa4eaa6fc7d7ac3920599294c76eed59642f3b5002",
+      "train_class_counts": [
+        884,
+        474,
+        813,
+        226,
+        172
+      ],
+      "svc_class_weight": [
+        0.5812217194570136,
+        1.0839662447257383,
+        0.631980319803198,
+        2.2734513274336283,
+        2.9872093023255815
+      ],
+      "svc_class_weight_hash": "391e5f0f9b14b92be36c0c7d31a8fa99634056016b2abef076342f8a12959d9a",
+      "scaler_hash": "175e32a23e9be4419b10351d800f03cbc5c62adff9bf69ffe9b3f781b17696c0",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "onset_only",
+      "fold": 3,
+      "held_out_group": "['Violoncello']",
+      "n_train": 2645,
+      "n_test": 757,
+      "train_index_hash": "8450e30493a6153059863352c07a4f500cb36cbb1591cf889ee5f6b3d361bf6f",
+      "test_index_hash": "edc3baf868bd34d0ea7fbe90db1a89b0ad54453e5089ec3c6c8f54b1b3f0aa4a",
+      "train_class_counts": [
+        902,
+        510,
+        822,
+        229,
+        182
+      ],
+      "svc_class_weight": [
+        0.5864745011086474,
+        1.0372549019607844,
+        0.6435523114355232,
+        2.3100436681222707,
+        2.9065934065934065
+      ],
+      "svc_class_weight_hash": "7bde7bbcc36b53fcb8ce474451cf6c0c4db055d35a590567b1b552cb6fddc6f1",
+      "scaler_hash": "c4a821fbf9336b1aaf84720f3be18674f4d2555e00e3c1f7e32134ce7f9ce17f",
+      "residualizer_hash": null,
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "onset_residualized",
+      "fold": 0,
+      "held_out_group": "['Viola']",
+      "n_train": 2469,
+      "n_test": 933,
+      "train_index_hash": "0eaf6083f3c6817baef8db318149d653766c2999a74d7d8a64e448b2a5708f82",
+      "test_index_hash": "67d9fb4f64ee5113ca7ed7bf5fb9d126a4f57d9c9a9f096ca939e3385bfcdb50",
+      "train_class_counts": [
+        884,
+        483,
+        732,
+        207,
+        163
+      ],
+      "svc_class_weight": [
+        0.5585972850678733,
+        1.022360248447205,
+        0.6745901639344263,
+        2.3855072463768114,
+        3.029447852760736
+      ],
+      "svc_class_weight_hash": "f74d9b0b083c154dcaebea7bd806ac78c4e6cc130f78ec4468ec9807bca2b019",
+      "scaler_hash": "0f9010b31e59aa8fc133eddde48e2bc5d13f0b185839c0506172e146bd4c67e6",
+      "residualizer_hash": "20e48bcc1a1ba9674592e5ca0ff2a74ddee3f5633f2cf74875e51450a93a7d50",
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "onset_residualized",
+      "fold": 1,
+      "held_out_group": "['Violin']",
+      "n_train": 2523,
+      "n_test": 879,
+      "train_index_hash": "abdf47ee5114a0044a55b9e52bd75188755dce8a2c05c2e122e199c91147c2e8",
+      "test_index_hash": "01a28d8306afb761fac61dcd401b5f14e8bc2508bb1b29847bf04592c75c3367",
+      "train_class_counts": [
+        909,
+        450,
+        756,
+        244,
+        164
+      ],
+      "svc_class_weight": [
+        0.5551155115511551,
+        1.1213333333333333,
+        0.6674603174603174,
+        2.068032786885246,
+        3.0768292682926828
+      ],
+      "svc_class_weight_hash": "36f794416e2cd5812ef54133aafdc22f1017fa8876bf5c050123b2de5337f90f",
+      "scaler_hash": "31bb3d9d2716b59f1ca51144051b317bae2cbaa6c81a22b149f1830a9aa0ec72",
+      "residualizer_hash": "6840bcd6e47f557e7eaf779def8118440f6c89aaa71e8d7bbd45e1cfd95ca4ca",
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "onset_residualized",
+      "fold": 2,
+      "held_out_group": "['Contrabass']",
+      "n_train": 2569,
+      "n_test": 833,
+      "train_index_hash": "0833c29d43cec03620a230509ec037c083d117d6828c8011589767804f04bae4",
+      "test_index_hash": "d5509afa1521d8baa19d64aa4eaa6fc7d7ac3920599294c76eed59642f3b5002",
+      "train_class_counts": [
+        884,
+        474,
+        813,
+        226,
+        172
+      ],
+      "svc_class_weight": [
+        0.5812217194570136,
+        1.0839662447257383,
+        0.631980319803198,
+        2.2734513274336283,
+        2.9872093023255815
+      ],
+      "svc_class_weight_hash": "391e5f0f9b14b92be36c0c7d31a8fa99634056016b2abef076342f8a12959d9a",
+      "scaler_hash": "2600b73e14251fbb88957511d5ed531d29b8910a0a7078bd02f799fe6725e801",
+      "residualizer_hash": "0c13e19d7bdb892f60002012e914e34b84bdd9005f7af9634cf456021a3825af",
+      "fit_scope": "train_idx_only"
+    },
+    {
+      "condition": "onset_residualized",
+      "fold": 3,
+      "held_out_group": "['Violoncello']",
+      "n_train": 2645,
+      "n_test": 757,
+      "train_index_hash": "8450e30493a6153059863352c07a4f500cb36cbb1591cf889ee5f6b3d361bf6f",
+      "test_index_hash": "edc3baf868bd34d0ea7fbe90db1a89b0ad54453e5089ec3c6c8f54b1b3f0aa4a",
+      "train_class_counts": [
+        902,
+        510,
+        822,
+        229,
+        182
+      ],
+      "svc_class_weight": [
+        0.5864745011086474,
+        1.0372549019607844,
+        0.6435523114355232,
+        2.3100436681222707,
+        2.9065934065934065
+      ],
+      "svc_class_weight_hash": "7bde7bbcc36b53fcb8ce474451cf6c0c4db055d35a590567b1b552cb6fddc6f1",
+      "scaler_hash": "6117334cbb6e7f308968fe36d7f26ecb7e99b5eb951bb7f69e78da4702cb7ae7",
+      "residualizer_hash": "4f1ca1024e908ca6b2309d100753c981c85c10cd78f4e8c69a41d3a5f53c6716",
+      "fit_scope": "train_idx_only"
+    }
+  ],
+  "limitations": [
+    "The four groups are instrument types, not independent players, sessions, or physical instruments.",
+    "Whole-dataset duration distributions and correlations are descriptive and are not used to fit a model.",
+    "This repair does not retroactively validate the historical duration_baseline.csv."
+  ]
+}

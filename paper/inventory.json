@@ -1,0 +1,434 @@
+{
+  "created_at": "2026-10-02T02:37:53.682867+00:00",
+  "source_base": "repository root",
+  "copy_base": "paper/",
+  "operation": "copy; originals preserved; Markdown relative links adjusted in copies only",
+  "copied_file_count": 43,
+  "files": [
+    {
+      "source": "연구과정/13_논문초안_아웃라인.md",
+      "copy": "manuscripts/early_drafts/13_논문초안_아웃라인.md",
+      "source_sha256": "b4b5f16131b6494ee8f60611c3e0fe749933c2531d35c9186807864889605b30",
+      "copy_sha256": "b4b5f16131b6494ee8f60611c3e0fe749933c2531d35c9186807864889605b30",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/14_원고초안_abstract_intro.md",
+      "copy": "manuscripts/early_drafts/14_원고초안_abstract_intro.md",
+      "source_sha256": "f1873699de2827cec71d1e4fc0ac372b869a5b70da69e5849f784cdce3cd25a0",
+      "copy_sha256": "f1873699de2827cec71d1e4fc0ac372b869a5b70da69e5849f784cdce3cd25a0",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/15_원고초안_related_work.md",
+      "copy": "manuscripts/early_drafts/15_원고초안_related_work.md",
+      "source_sha256": "7e15567be5a3dd3ed6e7aacf19f73e8126a51bd30126be591fcfc7ae9589c66d",
+      "copy_sha256": "7e15567be5a3dd3ed6e7aacf19f73e8126a51bd30126be591fcfc7ae9589c66d",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/16_원고초안_results.md",
+      "copy": "manuscripts/early_drafts/16_원고초안_results.md",
+      "source_sha256": "431fe97363d4c73c174a6a21b18434572d31485c74dcfcdf260ade24c5a280e5",
+      "copy_sha256": "431fe97363d4c73c174a6a21b18434572d31485c74dcfcdf260ade24c5a280e5",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/17_원고초안_discussion.md",
+      "copy": "manuscripts/early_drafts/17_원고초안_discussion.md",
+      "source_sha256": "4cd48b71af6eac3567709d9a6bbea4824056a63b0c10d89a73d21a87914d32fa",
+      "copy_sha256": "4cd48b71af6eac3567709d9a6bbea4824056a63b0c10d89a73d21a87914d32fa",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/18_원고초안_method.md",
+      "copy": "manuscripts/early_drafts/18_원고초안_method.md",
+      "source_sha256": "6653a5968f17193d4cb186be8032f2b8c356f768440f34a41815a1781c4f9f7a",
+      "copy_sha256": "6653a5968f17193d4cb186be8032f2b8c356f768440f34a41815a1781c4f9f7a",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/19_원고초안_limitations.md",
+      "copy": "manuscripts/early_drafts/19_원고초안_limitations.md",
+      "source_sha256": "90c4b7bdfd8796bb0cd28dd7da23428198f15a395c76f29f99faea49bd624779",
+      "copy_sha256": "90c4b7bdfd8796bb0cd28dd7da23428198f15a395c76f29f99faea49bd624779",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/20_통합원고_v0.md",
+      "copy": "manuscripts/early_drafts/20_통합원고_v0.md",
+      "source_sha256": "62833b85a329a10747e497c1652e1d9c5d598d1be1555097a96ff89ed73bdfe6",
+      "copy_sha256": "62833b85a329a10747e497c1652e1d9c5d598d1be1555097a96ff89ed73bdfe6",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/21_통합원고_국문_v0.md",
+      "copy": "manuscripts/early_drafts/21_통합원고_국문_v0.md",
+      "source_sha256": "0f839273627c58d5a8787376f8b483dd806f3a74c6ac343004fb76f9d4519729",
+      "copy_sha256": "0f839273627c58d5a8787376f8b483dd806f3a74c6ac343004fb76f9d4519729",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/주법분류_논문초안_국문_v0.docx",
+      "copy": "manuscripts/v0/주법분류_논문초안_국문_v0.docx",
+      "source_sha256": "8e27b7cff21970b7b7a27099dcff204b8a5d1cb5ee044a65c09674b88b2d1365",
+      "copy_sha256": "8e27b7cff21970b7b7a27099dcff204b8a5d1cb5ee044a65c09674b88b2d1365",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/주법분류_논문초안_국문_v0.md",
+      "copy": "manuscripts/v0/주법분류_논문초안_국문_v0.md",
+      "source_sha256": "48f85e6368dfbdf2992245be1875ddf4a7d1e5b800aaa8a117696923747c1086",
+      "copy_sha256": "43320147157e32c52674230bbebdd1d33d77340c0012682c72eccee94da93621",
+      "byte_identical": false,
+      "relative_link_updates": [
+        {
+          "before": "../results/phase1/canonical/verification/report.md",
+          "after": "../../notes/report.md"
+        },
+        {
+          "before": "../results/phase3/descriptor_probe.png",
+          "after": "../../figures/legacy/descriptor_probe.png"
+        },
+        {
+          "before": "../results/phase3/shap_group_bar.png",
+          "after": "../../figures/legacy/shap_group_bar.png"
+        },
+        {
+          "before": "../results/phase3/shap_flux_direction.png",
+          "after": "../../figures/legacy/shap_flux_direction.png"
+        },
+        {
+          "before": "../results/phase3/shap_surrogate_fidelity.png",
+          "after": "../../figures/legacy/shap_surrogate_fidelity.png"
+        }
+      ]
+    },
+    {
+      "source": "연구과정/주법분류_논문초안_국문_v1_canonical.docx",
+      "copy": "manuscripts/v1_canonical/주법분류_논문초안_국문_v1_canonical.docx",
+      "source_sha256": "612662056a6e16640fce455172a2c9bc0aa5dd1834e3b54d58976d4010fa0c56",
+      "copy_sha256": "612662056a6e16640fce455172a2c9bc0aa5dd1834e3b54d58976d4010fa0c56",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/주법분류_논문초안_국문_v1_canonical.md",
+      "copy": "manuscripts/v1_canonical/주법분류_논문초안_국문_v1_canonical.md",
+      "source_sha256": "5a973b129b8fc74737a813064b9d3cba6ad5dfe9c295418d17c6f4f61b0344e4",
+      "copy_sha256": "c08e903c14966871ea9f9cb55448eebd80ed89d8972bfbdad7d010252c153338",
+      "byte_identical": false,
+      "relative_link_updates": [
+        {
+          "before": "../results/phase1/canonical/manuscript/figures/figure1_budget_curves.png",
+          "after": "../../figures/canonical/figure1_budget_curves.png"
+        },
+        {
+          "before": "../results/phase1/canonical/manuscript/figures/figure2_resampling_units.png",
+          "after": "../../figures/canonical/figure2_resampling_units.png"
+        },
+        {
+          "before": "../results/phase1/canonical/manuscript/figures/figure3_confusions.png",
+          "after": "../../figures/canonical/figure3_confusions.png"
+        }
+      ]
+    },
+    {
+      "source": "연구과정/주법분류_논문초안_영문_v0.docx",
+      "copy": "manuscripts/v0/주법분류_논문초안_영문_v0.docx",
+      "source_sha256": "7c673c1c6140ba8f10850c6da37351a824f5ff3b85459a05135bba381d9ba523",
+      "copy_sha256": "7c673c1c6140ba8f10850c6da37351a824f5ff3b85459a05135bba381d9ba523",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/주법분류_논문초안_영문_v0.md",
+      "copy": "manuscripts/v0/주법분류_논문초안_영문_v0.md",
+      "source_sha256": "d05a9d57c92289c41af70e6bb308a56a98c6ffb35c7ce999ca68740688cc14a1",
+      "copy_sha256": "77d7625c0e85941fb4e072edaaaa277e264bfad241b83f86a8c2af984adb5682",
+      "byte_identical": false,
+      "relative_link_updates": [
+        {
+          "before": "../results/phase1/canonical/verification/report.md",
+          "after": "../../notes/report.md"
+        },
+        {
+          "before": "../results/phase3/descriptor_probe.png",
+          "after": "../../figures/legacy/descriptor_probe.png"
+        },
+        {
+          "before": "../results/phase3/shap_group_bar.png",
+          "after": "../../figures/legacy/shap_group_bar.png"
+        },
+        {
+          "before": "../results/phase3/shap_flux_direction.png",
+          "after": "../../figures/legacy/shap_flux_direction.png"
+        },
+        {
+          "before": "../results/phase3/shap_surrogate_fidelity.png",
+          "after": "../../figures/legacy/shap_surrogate_fidelity.png"
+        }
+      ]
+    },
+    {
+      "source": "연구과정/주법분류_논문초안_영문_v1_canonical.docx",
+      "copy": "manuscripts/v1_canonical/주법분류_논문초안_영문_v1_canonical.docx",
+      "source_sha256": "84f65cec1e7e1ac8a9a115cde1ae77597b48850a47023c1d64a0f5c1a9e4d8c0",
+      "copy_sha256": "84f65cec1e7e1ac8a9a115cde1ae77597b48850a47023c1d64a0f5c1a9e4d8c0",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "연구과정/주법분류_논문초안_영문_v1_canonical.md",
+      "copy": "manuscripts/v1_canonical/주법분류_논문초안_영문_v1_canonical.md",
+      "source_sha256": "f414160bac5d7a59974b4333281de35daa5f4f53b7bc9ead07a1197eae038c36",
+      "copy_sha256": "56e1d3b7be6ab73426f3e78a80d07a0138ec4d4a710e960c097445f76d39fe55",
+      "byte_identical": false,
+      "relative_link_updates": [
+        {
+          "before": "../results/phase1/canonical/manuscript/figures/figure1_budget_curves.png",
+          "after": "../../figures/canonical/figure1_budget_curves.png"
+        },
+        {
+          "before": "../results/phase1/canonical/manuscript/figures/figure2_resampling_units.png",
+          "after": "../../figures/canonical/figure2_resampling_units.png"
+        },
+        {
+          "before": "../results/phase1/canonical/manuscript/figures/figure3_confusions.png",
+          "after": "../../figures/canonical/figure3_confusions.png"
+        }
+      ]
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/review_preview.pdf",
+      "copy": "pdf/review_preview.pdf",
+      "source_sha256": "d80e64ef089ed90be66e87f9ed448fffaeeec860dc41cbc15f3e0c25198c9218",
+      "copy_sha256": "d80e64ef089ed90be66e87f9ed448fffaeeec860dc41cbc15f3e0c25198c9218",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/review_preview.html",
+      "copy": "preview/review_preview.html",
+      "source_sha256": "f4cce04392b3f563ffb6c036e17c7c585ff6316e34cfd4593755987f19a0d40c",
+      "copy_sha256": "f4cce04392b3f563ffb6c036e17c7c585ff6316e34cfd4593755987f19a0d40c",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/review_preview.md",
+      "copy": "preview/review_preview.md",
+      "source_sha256": "470b7cf6ab513a6d5d9a3e7a81705ea1ea92a5f0afe7b790713a852007eb56de",
+      "copy_sha256": "8ef58cede44ed2b77fcd7e02e3c8ffbc579d52ae55671ffb06e910ecea0d70d0",
+      "byte_identical": false,
+      "relative_link_updates": [
+        {
+          "before": "../results/phase1/canonical/manuscript/figures/figure1_budget_curves.png",
+          "after": "../figures/canonical/figure1_budget_curves.png"
+        },
+        {
+          "before": "../results/phase1/canonical/manuscript/figures/figure2_resampling_units.png",
+          "after": "../figures/canonical/figure2_resampling_units.png"
+        },
+        {
+          "before": "../results/phase1/canonical/manuscript/figures/figure3_confusions.png",
+          "after": "../figures/canonical/figure3_confusions.png"
+        }
+      ]
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/review.css",
+      "copy": "preview/review.css",
+      "source_sha256": "3141ec05c6c2beed8d078dd87c2048a31b96537b92491b7ac0be4f9811712048",
+      "copy_sha256": "3141ec05c6c2beed8d078dd87c2048a31b96537b92491b7ac0be4f9811712048",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/artifact_manifest.json",
+      "copy": "notes/original_artifact_manifest.json",
+      "source_sha256": "4666641cc8461f113aba493442835391916dee888d27a82ea304cb4b1cacbf29",
+      "copy_sha256": "4666641cc8461f113aba493442835391916dee888d27a82ea304cb4b1cacbf29",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/figures/figure1_budget_curves.pdf",
+      "copy": "figures/canonical/figure1_budget_curves.pdf",
+      "source_sha256": "0a1d36bed6e7f7b947a022fea33d14072fa1ca4d33689e4dd58dd6dd78d56557",
+      "copy_sha256": "0a1d36bed6e7f7b947a022fea33d14072fa1ca4d33689e4dd58dd6dd78d56557",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/figures/figure1_budget_curves.png",
+      "copy": "figures/canonical/figure1_budget_curves.png",
+      "source_sha256": "c5abd58f3c945b048ab49194a594cb9165bf72ba438e05894f5f2baffb5879b4",
+      "copy_sha256": "c5abd58f3c945b048ab49194a594cb9165bf72ba438e05894f5f2baffb5879b4",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/figures/figure2_resampling_units.pdf",
+      "copy": "figures/canonical/figure2_resampling_units.pdf",
+      "source_sha256": "f882c3af0cd10bb66852c422b1ee474a3810edcd81912f9635ed1b84b25a9b52",
+      "copy_sha256": "f882c3af0cd10bb66852c422b1ee474a3810edcd81912f9635ed1b84b25a9b52",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/figures/figure2_resampling_units.png",
+      "copy": "figures/canonical/figure2_resampling_units.png",
+      "source_sha256": "ba5c230dcee89e87ccec6d386d71cb28d47b4d6f785bb00cb2f3a4a152b9cf54",
+      "copy_sha256": "ba5c230dcee89e87ccec6d386d71cb28d47b4d6f785bb00cb2f3a4a152b9cf54",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/figures/figure3_confusions.pdf",
+      "copy": "figures/canonical/figure3_confusions.pdf",
+      "source_sha256": "59245407e2a9409fc490d4bf4cf6ee709025f49d751c55852209e7126875b82f",
+      "copy_sha256": "59245407e2a9409fc490d4bf4cf6ee709025f49d751c55852209e7126875b82f",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/figures/figure3_confusions.png",
+      "copy": "figures/canonical/figure3_confusions.png",
+      "source_sha256": "46786d6354689f8f5dd719029aa0f494c00966f90cf6f307cab26c04c113ce0e",
+      "copy_sha256": "46786d6354689f8f5dd719029aa0f494c00966f90cf6f307cab26c04c113ce0e",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/figures/manifest.json",
+      "copy": "figures/canonical/manifest.json",
+      "source_sha256": "fef4139c16a20c7cf75d40b5a16913ffa53e80a5ea26e2cb72a3a86437ed3869",
+      "copy_sha256": "fef4139c16a20c7cf75d40b5a16913ffa53e80a5ea26e2cb72a3a86437ed3869",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase3/descriptor_probe.png",
+      "copy": "figures/legacy/descriptor_probe.png",
+      "source_sha256": "1979510bedd1d8c56f51709c50d36b330d503db054e03868244fa6a332d34f61",
+      "copy_sha256": "1979510bedd1d8c56f51709c50d36b330d503db054e03868244fa6a332d34f61",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase3/shap_group_bar.png",
+      "copy": "figures/legacy/shap_group_bar.png",
+      "source_sha256": "0dbfe21e277e084821279a4daa47349de660cef0b33b5250405befbc4e331041",
+      "copy_sha256": "0dbfe21e277e084821279a4daa47349de660cef0b33b5250405befbc4e331041",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase3/shap_flux_direction.png",
+      "copy": "figures/legacy/shap_flux_direction.png",
+      "source_sha256": "af4aa3c427dbddd8f0588560a824eaf3293f2f95044474593616862681d388e1",
+      "copy_sha256": "af4aa3c427dbddd8f0588560a824eaf3293f2f95044474593616862681d388e1",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase3/shap_surrogate_fidelity.png",
+      "copy": "figures/legacy/shap_surrogate_fidelity.png",
+      "source_sha256": "0bd43b679cbe99cea5495307f042f2995de97f15fe1cf8834a3ae21116efd473",
+      "copy_sha256": "0bd43b679cbe99cea5495307f042f2995de97f15fe1cf8834a3ae21116efd473",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "summary.pdf",
+      "copy": "pdf/legacy/summary.pdf",
+      "source_sha256": "8352aa391272e93dcb226c688acb451bcdd0510a6b200a3043a9226b17bee42f",
+      "copy_sha256": "8352aa391272e93dcb226c688acb451bcdd0510a6b200a3043a9226b17bee42f",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/manuscript/READINESS.md",
+      "copy": "notes/READINESS.md",
+      "source_sha256": "8b7a5454d2b6fd1ebd7d452e3fe43b85e67534494f302dac4a89fbfa3bce21a4",
+      "copy_sha256": "8b7a5454d2b6fd1ebd7d452e3fe43b85e67534494f302dac4a89fbfa3bce21a4",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "docs/phase1_contribution_scope.md",
+      "copy": "notes/phase1_contribution_scope.md",
+      "source_sha256": "e8638227dc271ad6c7bd6aea40fdb21df6d36dd56bf91af66b36d80d4a00b184",
+      "copy_sha256": "e8638227dc271ad6c7bd6aea40fdb21df6d36dd56bf91af66b36d80d4a00b184",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "docs/기여정리_선행연구대비.md",
+      "copy": "notes/기여정리_선행연구대비.md",
+      "source_sha256": "99df48aa46eb7249e040ba7defbc549c7c98c4967cb1b76184360fa67c80d111",
+      "copy_sha256": "99df48aa46eb7249e040ba7defbc549c7c98c4967cb1b76184360fa67c80d111",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/verification/manuscript_claim_audit.md",
+      "copy": "notes/manuscript_claim_audit.md",
+      "source_sha256": "3bcb94d6ada30068b61b334cb5972c04b39fb1329aa9675ff56cd434b68f3d78",
+      "copy_sha256": "3bcb94d6ada30068b61b334cb5972c04b39fb1329aa9675ff56cd434b68f3d78",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/verification/report.md",
+      "copy": "notes/report.md",
+      "source_sha256": "231d90694e4de4d3f2c919c8dd1e61621377eb98a87334b546fdbf95324c1e10",
+      "copy_sha256": "231d90694e4de4d3f2c919c8dd1e61621377eb98a87334b546fdbf95324c1e10",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/verification/excluded_models.md",
+      "copy": "notes/excluded_models.md",
+      "source_sha256": "a6f479b7ab893831d7fa53f46798e7f68c70d1c6efd38e9ac951801095f266b1",
+      "copy_sha256": "a6f479b7ab893831d7fa53f46798e7f68c70d1c6efd38e9ac951801095f266b1",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/release/VALIDATION.md",
+      "copy": "notes/reproduction/VALIDATION.md",
+      "source_sha256": "50f41ebf7af60b62a976fa77ad31f9a0f9f659c5ba75159efb4a8225efc71913",
+      "copy_sha256": "50f41ebf7af60b62a976fa77ad31f9a0f9f659c5ba75159efb4a8225efc71913",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/release/VALIDATION.json",
+      "copy": "notes/reproduction/VALIDATION.json",
+      "source_sha256": "ec223dea415064f9b6bd8b5fa9f9fb0485645fe4e6be1fe3436cf2369b695878",
+      "copy_sha256": "ec223dea415064f9b6bd8b5fa9f9fb0485645fe4e6be1fe3436cf2369b695878",
+      "byte_identical": true,
+      "relative_link_updates": []
+    },
+    {
+      "source": "results/phase1/canonical/release/REPRODUCTION.json",
+      "copy": "notes/reproduction/REPRODUCTION.json",
+      "source_sha256": "d094879ce43909fed2d729930fe28b0198cea7d115d34be02ef55a21412aed73",
+      "copy_sha256": "d094879ce43909fed2d729930fe28b0198cea7d115d34be02ef55a21412aed73",
+      "byte_identical": true,
+      "relative_link_updates": []
+    }
+  ]
+}

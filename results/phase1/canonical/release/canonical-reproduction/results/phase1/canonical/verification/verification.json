@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "replayed_checkpoints": true,
+  "mert_svm_splits": 48,
+  "cnn_folds": 4,
+  "mert_svm_prediction_set_sha256": "06c6054246d89d7f1701aebb7df5b3a214556774dc93c6758b9a63bc0e622b2e",
+  "cnn_prediction_set_sha256": "ed567e5d0fa98ce5963c1b5eb7adf3b72e88168c9436d1d15d4ec25415619ec0",
+  "cnn_macro_f1_fold_mean": 0.8728739926826041,
+  "uncertainty_method": "paired percentile bootstrap; trial mean then instrument-type fold mean",
+  "scope": "Four held-out instrument types only; recording_id is a filename-derived proxy, not a verified session or performer."
+}

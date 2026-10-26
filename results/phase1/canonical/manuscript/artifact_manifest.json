@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-01",
+  "status": "internal_review_with_local_release_candidate",
+  "files": {
+    "README.md": "83db018e443fc356ec81be55fd8781a5a6b0c6a07efd973aa1192e5b51963139",
+    "requirements-phase1-analysis.txt": "db84bb3798de5fbc0c28fc8dd52a76fa2846c0c16693fbec4a7448c2e3a73b53",
+    "docs/phase1_contribution_scope.md": "e8638227dc271ad6c7bd6aea40fdb21df6d36dd56bf91af66b36d80d4a00b184",
+    "results/phase1/canonical/manuscript/READINESS.md": "8b7a5454d2b6fd1ebd7d452e3fe43b85e67534494f302dac4a89fbfa3bce21a4",
+    "results/phase1/canonical/manuscript/review_preview.md": "470b7cf6ab513a6d5d9a3e7a81705ea1ea92a5f0afe7b790713a852007eb56de",
+    "results/phase1/canonical/manuscript/review_preview.html": "f4cce04392b3f563ffb6c036e17c7c585ff6316e34cfd4593755987f19a0d40c",
+    "results/phase1/canonical/manuscript/review_preview.pdf": "d80e64ef089ed90be66e87f9ed448fffaeeec860dc41cbc15f3e0c25198c9218",
+    "results/phase1/canonical/manuscript/review.css": "3141ec05c6c2beed8d078dd87c2048a31b96537b92491b7ac0be4f9811712048",
+    "results/phase1/canonical/manuscript/figures/manifest.json": "fef4139c16a20c7cf75d40b5a16913ffa53e80a5ea26e2cb72a3a86437ed3869",
+    "src/phase1_canonical_figures.py": "94de669230414f4cec2657c1e2ef9e6e947dfe900a36a63bc938cfe44ceea81e",
+    "src/phase1_manuscript_export.py": "1f7b1966accf62b9b51e66f7aba7da8e63b65b0f89471934939de42ab8b19c65",
+    "src/phase1_manuscript_consistency.py": "9b2083c0382c0e2aebb5209003bd9914406fba25297297966a57b95c815ea03d",
+    "src/phase1_release_reproduce.py": "84448ce0146d56048001779e58de0aac58ce33f31ea920fc4b49faaefb749766",
+    "src/phase1_release_bundle.py": "99b49eb13a83fa89f782231b5e2b45301f16ddb8852991e68cee0f1d35750d15",
+    "연구과정/주법분류_논문초안_영문_v1_canonical.docx": "84f65cec1e7e1ac8a9a115cde1ae77597b48850a47023c1d64a0f5c1a9e4d8c0",
+    "연구과정/주법분류_논문초안_국문_v1_canonical.md": "5a973b129b8fc74737a813064b9d3cba6ad5dfe9c295418d17c6f4f61b0344e4",
+    "연구과정/주법분류_논문초안_국문_v1_canonical.docx": "612662056a6e16640fce455172a2c9bc0aa5dd1834e3b54d58976d4010fa0c56",
+    "연구과정/주법분류_논문초안_영문_v1_canonical.md": "f414160bac5d7a59974b4333281de35daa5f4f53b7bc9ead07a1197eae038c36",
+    "results/phase1/canonical/release/VALIDATION.md": "50f41ebf7af60b62a976fa77ad31f9a0f9f659c5ba75159efb4a8225efc71913",
+    "results/phase1/canonical/release/VALIDATION.json": "ec223dea415064f9b6bd8b5fa9f9fb0485645fe4e6be1fe3436cf2369b695878",
+    "results/phase1/canonical/release/REPRODUCTION.json": "d094879ce43909fed2d729930fe28b0198cea7d115d34be02ef55a21412aed73",
+    "results/phase1/canonical/release/canonical-reproduction.zip.sha256": "f42450eba5b7821426821c1d2a56e54dc1f18ac7922eae26605a3027b9df7ad5"
+  },
+  "checks": {
+    "canonical_tables": "passed for both manuscripts and README",
+    "figures": "input/output and source hashes match",
+    "docx": "2 editable tables and 3 embedded drawings per draft",
+    "html": "3 embedded figures with captions kept in figure blocks",
+    "pdf": "8 pages; all pages reviewed; title and abstract on first page",
+    "english_abstract_whitespace_words": 188,
+    "english_manuscript_whitespace_words": 2381,
+    "release": "ZIP extracted into separate folder; separate venv without torch; ten tables and three figures reproduced"
+  },
+  "public_release": false,
+  "submitted": false
+}

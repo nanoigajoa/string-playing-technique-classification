@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "audit": "repaired self-training target boundary",
+  "generated_at_utc": "2026-09-28T14:01:55.074611+00:00",
+  "overall_status": "repaired_target_boundary_passed",
+  "success": true,
+  "assertions": {
+    "oracle_mutation_does_not_change_training_targets": true,
+    "pseudo_mutation_changes_training_targets": true,
+    "test_score_mutation_does_not_change_iteration": true,
+    "core_signature_excludes_test_and_hidden_targets": true,
+    "paired_tensor_source_excludes_global_labels": true
+  },
+  "trace": {
+    "initial_targets": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "accepted_indices": [
+      2,
+      3
+    ],
+    "pseudo_targets_a": [
+      1,
+      0
+    ],
+    "pseudo_targets_b": [
+      0,
+      1
+    ],
+    "hidden_oracle_before": [
+      0,
+      1
+    ],
+    "hidden_oracle_after": [
+      9002,
+      9003
+    ],
+    "training_targets_a": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "training_targets_b": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    "validation_scores": [
+      0.2,
+      0.8,
+      0.5
+    ],
+    "test_scores_before": [
+      0.99,
+      0.1,
+      0.6
+    ],
+    "test_scores_after": [
+      0.01,
+      0.1,
+      0.99
+    ],
+    "selected_iteration_before_after_test_mutation": [
+      1,
+      1
+    ]
+  },
+  "contract": [
+    "Observed labels enter only through explicit labeled_targets.",
+    "Accepted unlabeled examples carry stored pseudo-targets into later updates.",
+    "Early-stop and selector partitions are fixed observed-label subsets.",
+    "The training core cannot receive test labels or hidden unlabeled targets.",
+    "Test evaluation occurs once after the selected checkpoint is frozen."
+  ]
+}

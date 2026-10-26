@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-21T02:35:57.096763+00:00",
+  "fold_key": "fold0_Viola",
+  "fold": 0,
+  "held_out_instrument": "Viola",
+  "seed": 520000,
+  "training_spec": {
+    "epochs": 30,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": "CosineAnnealingLR(T_max=epochs)",
+    "augmentation": "one random frequency mask and one random time mask per training access"
+  },
+  "selection_rule": "preregistered final epoch; no validation or test selection",
+  "n_train": 2469,
+  "n_test": 933,
+  "train_index_hash": "0eaf6083f3c6817baef8db318149d653766c2999a74d7d8a64e448b2a5708f82",
+  "test_index_hash": "67d9fb4f64ee5113ca7ed7bf5fb9d126a4f57d9c9a9f096ca939e3385bfcdb50",
+  "partitions_disjoint": true,
+  "class_weight_source": "labels[train_idx] only",
+  "train_class_counts": [
+    884,
+    483,
+    732,
+    207,
+    163
+  ],
+  "class_weights": [
+    0.5585972850678733,
+    1.022360248447205,
+    0.6745901639344263,
+    2.3855072463768114,
+    3.029447852760736
+  ],
+  "class_weight_hash": "f74d9b0b083c154dcaebea7bd806ac78c4e6cc130f78ec4468ec9807bca2b019",
+  "epoch_train_losses": [
+    0.9606378727998489,
+    0.5592314776701804,
+    0.47801641413034535,
+    0.42318456639082,
+    0.40844372640817594,
+    0.38205698524148035,
+    0.40077117276497376,
+    0.3879319156209628,
+    0.32920062178984666,
+    0.33039318808378315,
+    0.30574566574814993,
+    0.2980255382374311,
+    0.2503209224400612,
+    0.2300486940986071,
+    0.23843098126160792,
+    0.2162400075735954,
+    0.2233780748091447,
+    0.21534608533749214,
+    0.2098539619682691,
+    0.1883509011270526,
+    0.18358766535917917,
+    0.18566372013913515,
+    0.16350484979697144,
+    0.18110739210477242,
+    0.17284649920960268,
+    0.167052919164491,
+    0.15859096912810436,
+    0.1522244956726447,
+    0.17294747714335337,
+    0.1739438399194907
+  ],
+  "metrics": {
+    "macro_f1": 0.8182876649453416,
+    "per_class_f1": [
+      0.9529780564263323,
+      0.6551724137931034,
+      0.9852216748768473,
+      0.88268156424581,
+      0.6153846153846154
+    ],
+    "confusion_matrix": [
+      [
+        304,
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        76,
+        0,
+        0,
+        80
+      ],
+      [
+        9,
+        0,
+        300,
+        0,
+        0
+      ],
+      [
+        16,
+        0,
+        0,
+        79,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        64
+      ]
+    ]
+  },
+  "artifacts": {
+    "checkpoint": "models/phase1/canonical/cnn/fold0_Viola/final_epoch.pt",
+    "checkpoint_sha256": "626bc183596c5265e70147f1885dd66c72d3a31197cd0f0faf42cac81d6e2d75",
+    "predictions": "results/phase1/canonical/cnn/predictions/fold0_Viola.npz",
+    "predictions_sha256": "4da7f8d2057ed1f7c81eb41bbd23e253d91fab9ffb0586711d1bf620f033ffdc"
+  },
+  "prediction_content_hash": "ff7c49bcccd4dbb67f784c53a51da2f3d0100f01c3299c4ce8ad9aadadbabb0d",
+  "test_prediction_calls": 1
+}

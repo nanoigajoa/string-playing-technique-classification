@@ -1,0 +1,376 @@
+{
+  "audit": "phase1_train_only_preprocessing",
+  "created_at_utc": "2026-09-20T13:47:43.632373+00:00",
+  "scope": "Phase 1 Python evaluation paths, core CNN/Phase 1 notebooks, and repaired preprocessing primitives",
+  "source_records": [
+    {
+      "path": "notebooks/03_modeling_v2.ipynb",
+      "patterns": [
+        "compute_class_weight('balanced'",
+        "y=labels"
+      ],
+      "classification": "legacy_violation",
+      "reason": "The CNN notebook computes one class-weight vector from all labels before GroupKFold.",
+      "source_sha256": "9d58ef8f26c38d7c523f937ec882f4ddda26db8cf820d0b66adaa9d386060426",
+      "evidence": [
+        {
+          "line": 111,
+          "text": "\"class_w       = compute_class_weight('balanced', classes=np.arange(len(CLASSES)), y=labels)\\n\",",
+          "pattern": "compute_class_weight('balanced'"
+        },
+        {
+          "line": 111,
+          "text": "\"class_w       = compute_class_weight('balanced', classes=np.arange(len(CLASSES)), y=labels)\\n\",",
+          "pattern": "y=labels"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "notebooks/04_phase1.ipynb",
+      "patterns": [
+        "counts = np.bincount(labels",
+        "nn.CrossEntropyLoss(weight=class_weights)"
+      ],
+      "classification": "legacy_violation",
+      "reason": "The Phase 1 notebook computes global MERT class weights before configured splits.",
+      "source_sha256": "953a9f26448fd40c03cfb7760b1314ea1b7e7ab9cadcae6f919da3485979b16f",
+      "evidence": [
+        {
+          "line": 74,
+          "text": "\"counts = np.bincount(labels, minlength=N_CLASSES).astype(float)\\n\",",
+          "pattern": "counts = np.bincount(labels"
+        },
+        {
+          "line": 323,
+          "text": "\"    criterion = nn.CrossEntropyLoss(weight=class_weights)\\n\",",
+          "pattern": "nn.CrossEntropyLoss(weight=class_weights)"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "src/phase1_rerun.py",
+      "patterns": [
+        "counts = np.bincount(labels",
+        "CrossEntropyLoss(weight=class_weights)"
+      ],
+      "classification": "legacy_violation",
+      "reason": "MERT loss weights are derived from the repository-global label vector.",
+      "source_sha256": "477decbefa63a55a418c08ddfcf5ba3ded1bafb558e6bab37984058fa6794469",
+      "evidence": [
+        {
+          "line": 51,
+          "text": "counts = np.bincount(labels, minlength=N_CLASSES).astype(float)",
+          "pattern": "counts = np.bincount(labels"
+        },
+        {
+          "line": 78,
+          "text": "criterion = nn.CrossEntropyLoss(weight=class_weights)",
+          "pattern": "CrossEntropyLoss(weight=class_weights)"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "src/phase1_mert_tuning_audit.py",
+      "patterns": [
+        "counts = np.bincount(labels",
+        "CrossEntropyLoss(weight=class_weights)"
+      ],
+      "classification": "legacy_violation",
+      "reason": "MERT head loss weights are computed before the outer-fold training indices are supplied.",
+      "source_sha256": "cb74b9052eb2b5cc539fe2e2b5944a3019c680a5ad4a143afc6f10ca310dd09b",
+      "evidence": [
+        {
+          "line": 66,
+          "text": "counts = np.bincount(labels, minlength=N_CLASSES).astype(float)",
+          "pattern": "counts = np.bincount(labels"
+        },
+        {
+          "line": 113,
+          "text": "crit  = nn.CrossEntropyLoss(weight=class_weights)",
+          "pattern": "CrossEntropyLoss(weight=class_weights)"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "src/phase1_layer_probe.py",
+      "patterns": [
+        "counts = np.bincount(labels",
+        "CrossEntropyLoss(weight=class_weights)"
+      ],
+      "classification": "legacy_violation",
+      "reason": "Layer-probe loss weights are derived from all labels.",
+      "source_sha256": "ffcaa9ace18b92cfedbbcfabfb1d5c1a33e0e2bbf2ccd942d68e3f3d0fd3ff49",
+      "evidence": [
+        {
+          "line": 63,
+          "text": "counts = np.bincount(labels, minlength=N_CLASSES).astype(float)",
+          "pattern": "counts = np.bincount(labels"
+        },
+        {
+          "line": 131,
+          "text": "crit = nn.CrossEntropyLoss(weight=class_weights)",
+          "pattern": "CrossEntropyLoss(weight=class_weights)"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "src/phase1_supplementary_4class.py",
+      "patterns": [
+        "counts = np.bincount(labels",
+        "CrossEntropyLoss(weight=class_weights)"
+      ],
+      "classification": "legacy_violation",
+      "reason": "Four-class MERT loss weights are derived from all retained labels.",
+      "source_sha256": "07bd3f4cf32630d36f33f00cdcc459a3e2d3c526c4c7bdc1351fc966b5d7ffe3",
+      "evidence": [
+        {
+          "line": 70,
+          "text": "counts = np.bincount(labels, minlength=N_CLASSES).astype(float)",
+          "pattern": "counts = np.bincount(labels"
+        },
+        {
+          "line": 115,
+          "text": "crit  = nn.CrossEntropyLoss(weight=class_weights)",
+          "pattern": "CrossEntropyLoss(weight=class_weights)"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "src/phase1_lora.py",
+      "patterns": [
+        "counts = np.bincount(labels",
+        "cw = torch.tensor(counts.sum()"
+      ],
+      "classification": "legacy_violation",
+      "reason": "LoRA loss weights are derived from all labels rather than tr_idx.",
+      "source_sha256": "8f5262b8d2b139abd65f45397912a6bffd2cd7d48971f2b824498b882e2af521",
+      "evidence": [
+        {
+          "line": 90,
+          "text": "counts = np.bincount(labels, minlength=N_CLASSES).astype(float)",
+          "pattern": "counts = np.bincount(labels"
+        },
+        {
+          "line": 207,
+          "text": "cw = torch.tensor(counts.sum() / (N_CLASSES * counts), dtype=torch.float32, device=device)",
+          "pattern": "cw = torch.tensor(counts.sum()"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "src/phase1_duration_baseline.py",
+      "patterns": [
+        "LinearRegression().fit(D, X)",
+        "X_resid = residualize(X_full, dur)"
+      ],
+      "classification": "legacy_violation",
+      "reason": "Duration residualization is fit once on all outer folds before LOSO.",
+      "source_sha256": "5e785c6db00d402107a2cc9c3ab01f331ea9d0f5275c09a0f18bd6cbd7afae6f",
+      "evidence": [
+        {
+          "line": 74,
+          "text": "return X - LinearRegression().fit(D, X).predict(D)",
+          "pattern": "LinearRegression().fit(D, X)"
+        },
+        {
+          "line": 113,
+          "text": "X_resid = residualize(X_full, dur)",
+          "pattern": "X_resid = residualize(X_full, dur)"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "src/phase1_duration_baseline.py",
+      "patterns": [
+        "np.full_like(y, np.bincount(y).argmax())"
+      ],
+      "classification": "legacy_violation",
+      "reason": "The reported majority baseline reads the full evaluation label distribution.",
+      "source_sha256": "5e785c6db00d402107a2cc9c3ab01f331ea9d0f5275c09a0f18bd6cbd7afae6f",
+      "evidence": [
+        {
+          "line": 95,
+          "text": "maj = np.full_like(y, np.bincount(y).argmax())",
+          "pattern": "np.full_like(y, np.bincount(y).argmax())"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "src/phase1_mert_tuning_audit.py",
+      "patterns": [
+        "Pipeline([('scaler', StandardScaler())",
+        "pipe.fit(X_feat[tr_idx], labels[tr_idx])"
+      ],
+      "classification": "safe_structure",
+      "reason": "The SVM scaler and balanced SVC are fit together on tr_idx only.",
+      "source_sha256": "cb74b9052eb2b5cc539fe2e2b5944a3019c680a5ad4a143afc6f10ca310dd09b",
+      "evidence": [
+        {
+          "line": 148,
+          "text": "pipe = Pipeline([('scaler', StandardScaler()),",
+          "pattern": "Pipeline([('scaler', StandardScaler())"
+        },
+        {
+          "line": 151,
+          "text": "pipe.fit(X_feat[tr_idx], labels[tr_idx])",
+          "pattern": "pipe.fit(X_feat[tr_idx], labels[tr_idx])"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "src/phase1_svm_seed_comparison.py",
+      "patterns": [
+        "('scaler', StandardScaler())",
+        "clf.fit(X_train, y_train)"
+      ],
+      "classification": "safe_structure",
+      "reason": "The caller supplies a training partition to the complete SVM pipeline.",
+      "source_sha256": "325f443d524b4ae59447571d7978d06eb6fc9337a58f8a1c20fdf7b1670237d0",
+      "evidence": [
+        {
+          "line": 72,
+          "text": "('scaler', StandardScaler()),",
+          "pattern": "('scaler', StandardScaler())"
+        },
+        {
+          "line": 93,
+          "text": "clf.fit(X_train, y_train)",
+          "pattern": "clf.fit(X_train, y_train)"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "src/phase1_cluster_bootstrap.py",
+      "patterns": [
+        "make_pipeline(StandardScaler()",
+        "pipe.fit(X_feat[train_idx], labels[train_idx])"
+      ],
+      "classification": "safe_structure",
+      "reason": "Refit scaling and SVC weighting use train_idx only.",
+      "source_sha256": "2dbd7bed49483abd82d7dba53ac01f4866e934f5a1bb7fdf429302d7094bc60a",
+      "evidence": [
+        {
+          "line": 114,
+          "text": "pipe = make_pipeline(StandardScaler(),",
+          "pattern": "make_pipeline(StandardScaler()"
+        },
+        {
+          "line": 116,
+          "text": "pipe.fit(X_feat[train_idx], labels[train_idx])",
+          "pattern": "pipe.fit(X_feat[train_idx], labels[train_idx])"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    },
+    {
+      "path": "src/phase1_selftraining_repaired.py",
+      "patterns": [
+        "train_only_class_weights(pool.targets",
+        "CrossEntropyLoss(weight=weights)"
+      ],
+      "classification": "safe_structure",
+      "reason": "The repaired path derives weights from its explicit paired training pool.",
+      "source_sha256": "6f60cb7553e67408cbf724ad683487c5d40c63ad47a81f1d9b7ba74096494f2a",
+      "evidence": [
+        {
+          "line": 217,
+          "text": "weights = train_only_class_weights(pool.targets, n_classes, device)",
+          "pattern": "train_only_class_weights(pool.targets"
+        },
+        {
+          "line": 218,
+          "text": "criterion = nn.CrossEntropyLoss(weight=weights)",
+          "pattern": "CrossEntropyLoss(weight=weights)"
+        }
+      ],
+      "all_expected_patterns_found": true,
+      "missing_patterns": []
+    }
+  ],
+  "feature_selection": {
+    "learned_selector_found_in_scoped_paths": false,
+    "note": "Named onset/chroma subsets are prespecified column sets, not selectors fit from labels. Any future learned selector must be fit inside the outer-fold training path."
+  },
+  "descriptive_statistics": {
+    "allowed_whole_dataset_use": "Class-duration tables and correlations may be reported as descriptive summaries only.",
+    "not_allowed": "Whole-dataset statistics may not fit, select, tune, or transform an outer-fold model."
+  },
+  "sentinel": {
+    "seed": 20260920,
+    "mutation_scope": {
+      "test_labels": "all labels replaced by class 0",
+      "test_features": "x * 1000 + 777",
+      "test_duration": "duration * 50 + 100"
+    },
+    "repaired_artifacts_before": {
+      "class_weight": "6931c8912f02f3692f0585a0dcc9ef3a7563ad9ca4e1f02a4d72f08943c38d40",
+      "scaler": "fdce884bc34be83a552befe605e0c5c0d9b4bf8492d44422acff7f4413110c1c",
+      "residualizer": "bf31c1dddade90bd1f727204e15e29c79bb12a1965b963ccdecd68ae320d369e"
+    },
+    "repaired_artifacts_after_test_mutation": {
+      "class_weight": "6931c8912f02f3692f0585a0dcc9ef3a7563ad9ca4e1f02a4d72f08943c38d40",
+      "scaler": "fdce884bc34be83a552befe605e0c5c0d9b4bf8492d44422acff7f4413110c1c",
+      "residualizer": "bf31c1dddade90bd1f727204e15e29c79bb12a1965b963ccdecd68ae320d369e"
+    },
+    "repaired_artifacts_after_train_mutation": {
+      "class_weight": "fc989e014f583f3fb1ddacf93789d9ccc5ceb4ce4604fdf5c5684e7844b104b3",
+      "scaler": "b35f6f093f4d8f539272c023633c6cdb297cff5d0a1e7b88ab94b616a4812509",
+      "residualizer": "db72fdc105fbddee468a1fe306b073f4d68126a458f22e16b4fa850eeff7491b"
+    },
+    "legacy_artifacts_before": {
+      "class_weight": "6931c8912f02f3692f0585a0dcc9ef3a7563ad9ca4e1f02a4d72f08943c38d40",
+      "scaler": "2cf97441cf4c6ee69c443d37c4c1563bd2a930a798d31e44bb92c1ed5e1ff21d",
+      "residualizer": "b35ae77b78553776104ee6082a989da44a9fb2d532f4f404be78d27563e74cde"
+    },
+    "legacy_artifacts_after_test_mutation": {
+      "class_weight": "b0ce06ef42bd1f6ace28e0bc9edc29af94409e9ae86b52ecf5e3fe2176b01497",
+      "scaler": "418f2ca709494315c122ca7eb3716bc02265c03762506a6ff1ada4e90a8cc46e",
+      "residualizer": "66fdd5aa03a8f9fc82b0e3b3b53fafa3e48b91d758afd40a10702c4014395103"
+    },
+    "assertions": {
+      "test_label_mutation_does_not_change_repaired_class_weight": true,
+      "test_feature_mutation_does_not_change_repaired_scaler": true,
+      "test_feature_or_duration_mutation_does_not_change_repaired_residualizer": true,
+      "train_label_mutation_changes_repaired_class_weight": true,
+      "train_feature_mutation_changes_repaired_scaler": true,
+      "train_feature_or_duration_mutation_changes_repaired_residualizer": true,
+      "legacy_global_class_weight_reacts_to_test_labels": true,
+      "legacy_global_scaler_reacts_to_test_features": true,
+      "legacy_global_residualizer_reacts_to_test_data": true
+    },
+    "passed": true
+  },
+  "status": {
+    "static_expected_patterns_found": true,
+    "repaired_primitives_pass_sentinel": true,
+    "legacy_paths_publication_safe": false,
+    "verification_2_audit_complete": true,
+    "verification_2_repair_primitives_complete": true,
+    "verification_2_publication_rerun_ready": false,
+    "verification_2_complete": false,
+    "reason": "The audit and repaired primitives are complete, but legacy MERT/CNN paths must not feed a publication rerun until their training entry points use the repaired train-only API."
+  }
+}
